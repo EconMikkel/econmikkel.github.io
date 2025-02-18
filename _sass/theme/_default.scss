@@ -32,8 +32,8 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Default light theme for the site */
 :root {
-    --global-base-color                 : #b3b3b3;
-    --global-bg-color                   : #b3b3b3;
+    --global-base-color                 : #{$rf-main-purple};
+    --global-bg-color                   : #{$rf-main-purple};
     --global-border-color               : #{$rf-main-purple};
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
@@ -41,8 +41,8 @@ $sidebar-screen-min-width   : 1024px;
     --global-link-color                 : {$rf-main-purple};
     --global-link-color-hover           : mix(#000, #{$rf-main-purple}, 25%);
     --global-link-color-visited         : mix(#fff, #{$rf-main-purple}, 25%);  
-    --global-masthead-link-color        : #{$rf-main-purple};
-    --global-masthead-link-color-hover  : mix(#000, #{rf-main-purple}, 25%);    
+    --global-masthead-link-color        : #FFFFFF;
+    --global-masthead-link-color-hover  : mix(#000, #FFFFFF, 25%);    
     --global-text-color                 : #FFFFFF;
     --global-text-color-light           : #FFFFFF;
     --global-thead-color                : #FFFFFF;
