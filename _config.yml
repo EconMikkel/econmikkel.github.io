@@ -31,12 +31,12 @@ author:
   name             : "Mikkel Stahlschmidt"
   pronouns         : # example: "she/her"  
   bio              : "Ph.d. student at Department of Economics, University of Copenhagen, employed at ROCKWOOL Foundation Interventions Unit"
-  location         : "Copenhagen, Denmark"
-  email            : "mis [at] rfintervention.dk" 
+  location         : # location
+  email            : "mis@rfintervention.dk" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?hl=da&user=ITvk0PcAAAAJ"
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0007-2392-6470"
   semantic         : # URL
