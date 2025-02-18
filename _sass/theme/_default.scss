@@ -34,15 +34,15 @@ $sidebar-screen-min-width   : 1024px;
 :root {
     --global-base-color                 : #666666;
     --global-bg-color                   : #666666;
-    --global-border-color               : #{$lighter-gray};
+    --global-border-color               : #{$rf-main-purple};
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
     --global-link-color                 : {$rf-main-orange};
     --global-link-color-hover           : mix(#000, #{$rf-main-orange}, 25%);
     --global-link-color-visited         : mix(#fff, #{$rf-main-orange}, 25%);  
-    --global-masthead-link-color        : #{$rf-main-purple};
-    --global-masthead-link-color-hover  : mix(#000, #{rf-main-purple}, 25%);    
+    --global-masthead-link-color        : #{$rf-main-orange};
+    --global-masthead-link-color-hover  : mix(#000, #{rf-main-orange}, 25%);    
     --global-text-color                 : #FFFFFF;
     --global-text-color-light           : #FFFFFF;
     --global-thead-color                : #FFFFFF;
