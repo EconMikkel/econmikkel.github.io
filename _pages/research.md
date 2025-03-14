@@ -24,7 +24,6 @@ author_profile: true
 ## Provided research assistance to
 ---
 
-* Pupil Well-being in Danish Primary and Lower Secondary Schools
-  Larsen, Anna Folke, Leme, Afonso Saraiva Câmara, and Simonsen, Marianne
-  *Economics Working Papaers* 2020-12, Department fo Economics and Business Economics, Aarhus University
-  [Link](https://pure.au.dk/ws/portalfiles/portal/197307129/wp20_13.pdf)
+* Anna Folke Larsen & Afonso Saraiva Câmara Leme & Marianne Simonsen, 2020. "Pupil Well-being in Danish Primary and Lower Secondary Schools," Economics Working Papers 2020-13, Department of Economics and Business Economics, Aarhus University. [Link](https://pure.au.dk/ws/portalfiles/portal/197307129/wp20_13.pdf)
+
+- Unna Folke Larsen & Afonso Saraiva Câmara Leme & Marianne Simonsen, 2020. "Pupil Well-being in Danish Primary and Lower Secondary Schools," Economics Working Papers 2020-13, Department of Economics and Business Economics, Aarhus University. [Link](https://pure.au.dk/ws/portalfiles/portal/197307129/wp20_13.pdf)
