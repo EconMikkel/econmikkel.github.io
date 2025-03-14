@@ -5,20 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-## Journal Articles  
----
-
-- **Title 1 - Empirical stuff**  
-  Author Name  
-  *Journal Name*, Year  
-  [Link](#)
-
-- **Title 2**  
-  Author Name  
-  *Journal Name*, Year  
-  [Link](#)
-
-
 ## Working Papers
 ---
 
