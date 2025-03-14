@@ -8,7 +8,7 @@ author_profile: true
 ## Journal Articles  
 ---
 
-- **Title 1**  
+- **Title 1 - Empirical stuff**  
   Author Name  
   *Journal Name*, Year  
   [Link](#)
@@ -22,12 +22,12 @@ author_profile: true
 ## Working Papers
 ---
 
-- **Title 3**  
+- **Title 3 - AI**  
   Author Name  
   *Journal Name*, Year  
   [Link](#)
 
-- **Title 4**  
+- **Title 4 - Applied weird stuff**  
   Author Name  
   *Journal Name*, Year  
   [Link](#)
