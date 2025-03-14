@@ -5,10 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% include base_path %}
-
-{% capture publications %}
-
 ## Journal Articles  
 ---
 
@@ -35,7 +31,3 @@ author_profile: true
   Author Name  
   *Journal Name*, Year  
   [Link](#)
-
-{% endcapture %}
-
-{{ publications | markdownify }}
