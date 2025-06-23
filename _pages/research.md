@@ -24,7 +24,7 @@ author_profile: true
 
 - **Title 1 - First**  
   Author Name  
-  [Link](files/paper1.pdf)
+  [Link](https://econmikkel.github.io/files/paper1.pdf)
 
 ## Unreviewed publications
 ---
