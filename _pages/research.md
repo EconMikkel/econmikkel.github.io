@@ -5,10 +5,10 @@ permalink: /research/
 author_profile: true
 ---
 
-## Working Papers
+## Publications
 ---
 
-- **Title 3 - AI**  
+- **Title 3 - Placeholder**  
   Author Name  
   *Journal Name*, Year  
   [Link](#)
@@ -17,6 +17,14 @@ author_profile: true
   Author Name  
   *Journal Name*, Year  
   [Link](#)
+
+
+## Working Papers
+---
+
+- **Title 1 - First**  
+  Author Name  
+  [Link](files/paper1.pdf)
 
 ## Unreviewed publications
 ---
