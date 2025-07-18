@@ -25,6 +25,7 @@ author_profile: true
 - **Title 1 - First**  
   Author Name  
   [Link](https://econmikkel.github.io/files/paper1.pdf)
+  [Replication package](https://github.com/EconMikkel/replication-packages/tree/main/Accommodation)
 
 ## Unreviewed publications
 ---
