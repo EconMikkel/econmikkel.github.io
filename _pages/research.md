@@ -8,27 +8,15 @@ author_profile: true
 ## Publications
 ---
 
-- **Title 3 - Placeholder**  
-  Author Name  
-  *Journal Name*, Year  
-  [Link](#)
-
-- **Title 4 - Applied weird stuff**  
-  Author Name  
-  *Journal Name*, Year  
-  [Link](#)
-
+*Cricket sound*
 
 ## Working Papers
 ---
 
-- **Title 1 - First**  
-  Author Name  
+- **TBA**  
+  Mette Foged, Jens Hainmueller, **Mikkel Stahlschmidt** and Edith Zink
   [Link](https://econmikkel.github.io/files/paper1.pdf)
   [Replication package](https://github.com/EconMikkel/replication-packages/tree/main/Accommodation)
-
-## Unreviewed publications
----
 
 ## Provided research assistance to
 ---
