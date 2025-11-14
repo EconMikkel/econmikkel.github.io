@@ -7,10 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-Hello and thanks for visiting my site. Here you will find my scientific work, talks and conferences I have participated in and potentially other related science-stuff.
+Hello and thanks for visiting my site. Here you will find my scientific work.
 
 New News
 ------
-Ut quis finibus erat. Aliquam at eros euismod, sodales libero sed, finibus mi. Morbi vestibulum in enim ut laoreet. Vestibulum pharetra lorem nisi, id ornare lacus scelerisque tempor. Praesent ornare accumsan dolor porttitor rhoncus. Ut non ullamcorper quam. Maecenas lacinia turpis et lectus viverra feugiat. Sed eget ex sed nunc vulputate ornare sit amet sit amet felis. Mauris mollis, nibh sollicitudin fringilla vulputate, erat lorem euismod mi, ut vestibulum augue urna vitae nibh.
+Working paper together with Mette Foged, Jens Hainmueller, and Edith Zink is now in the press [Link](https://econmikkel.github.io/files/paper1.pdf).
 
 
