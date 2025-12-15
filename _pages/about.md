@@ -11,6 +11,6 @@ Hello and thanks for visiting my site. Here you will find my scientific work.
 
 New News
 ------
-Working paper together with Mette Foged, Jens Hainmueller, and Edith Zink is now in the press [Link](https://econmikkel.github.io/files/paper1.pdf).
+Working paper together with Mette Foged, Jens Hainmueller, and Edith Zink is now in the press: [How Initial Accommodation Shapes Refugee Integration: Quasi-Experimental Evidence from the Ukrainian Displacement Crisis in Denmark](https://www.rfberlin.com/network-paper/how-initial-accommodation-shapes-refugee-integration-quasi-experimental-evidence-from-the-ukrainian-displacement-crisis-in-denmark/).
 
 

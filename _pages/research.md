@@ -12,10 +12,8 @@ author_profile: true
 
 ## Working Papers
 ---
-
-- **TBA**  
-  Mette Foged, Jens Hainmueller, **Mikkel Stahlschmidt** and Edith Zink
-  [Link](https://econmikkel.github.io/files/paper1.pdf)
+- [How Initial Accommodation Shapes Refugee Integration: Quasi-Experimental Evidence from the Ukrainian Displacement Crisis in Denmark](https://www.rfberlin.com/network-paper/how-initial-accommodation-shapes-refugee-integration-quasi-experimental-evidence-from-the-ukrainian-displacement-crisis-in-denmark/)
+Mette Foged, Jens Hainmueller, **Mikkel Stahlschmidt** and Edith Zink
 
 ## Provided research assistance to
 ---
