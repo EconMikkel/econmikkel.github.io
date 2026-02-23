@@ -12,7 +12,7 @@ author_profile: true
 
 ## Working Papers
 ---
-- **How Initial Accommodation Shapes Refugee Integration: Quasi-Experimental Evidence from the Ukrainian Displacement Crisis in Denmark**  
+- **How Initial Accommodation Shapes Refugee Integration: Quasi-Experimental Evidence from the Ukrainian Displacement Crisis in Denmark**
   *[Mette Foged](https://rockwoolfonden.dk/medarbejdere/mette-foged/), [Jens Hainmueller](https://j-hai.github.io/), Mikkel Stahlschmidt, and [Edith Zink](https://zinked.github.io/)*  
   [Working paper](https://www.rfberlin.com/network-paper/how-initial-accommodation-shapes-refugee-integration-quasi-experimental-evidence-from-the-ukrainian-displacement-crisis-in-denmark/)
 
