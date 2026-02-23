@@ -19,7 +19,7 @@ author_profile: true
 ## Work in progress
 ---
 - **What do we gain(and lose) from responsive questions? Comparing open-ended survey questions with adaptive probes from an AI interviewer**  
-  *[Hjalmar Alexander Bang Carlsen](https://researchprofiles.ku.dk/da/persons/hjalmar-alexander-bang-carlsen/), [Tobias Priesholm Gårdhus](https://researchprofiles.ku.dk/da/persons/tobias-priesholm-g%C3%A5rdhus/), and Mikkel Stahlschmidt*
+  *[Hjalmar Alexander Bang Carlsen](https://researchprofiles.ku.dk/da/persons/hjalmar-alexander-bang-carlsen/), [Tobias Priesholm Gårdhus](https://researchprofiles.ku.dk/da/persons/tobias-priesholm-g%C3%A5rdhus/), and Mikkel Stahlschmidt*  
   [Pre-registration](https://osf.io/3xkht/overview)
 
 ## Provided research assistance to
