@@ -16,9 +16,14 @@ author_profile: true
   *[Mette Foged](https://rockwoolfonden.dk/medarbejdere/mette-foged/), [Jens Hainmueller](https://j-hai.github.io/), Mikkel Stahlschmidt, and [Edith Zink](https://zinked.github.io/)*  
   [Working paper](https://www.rfberlin.com/network-paper/how-initial-accommodation-shapes-refugee-integration-quasi-experimental-evidence-from-the-ukrainian-displacement-crisis-in-denmark/)
 
+## Work in progress
+---
+- **What do we gain(and lose) from responsive questions? Comparing open-ended survey questions with adaptive probes from an AI interviewer**
+  *[Hjalmar Alexander Bang Carlsen](https://researchprofiles.ku.dk/da/persons/hjalmar-alexander-bang-carlsen/), [Tobias Priesholm Gårdhus](https://researchprofiles.ku.dk/da/persons/tobias-priesholm-g%C3%A5rdhus/), and Mikkel Stahlschmidt*
+  [Pre-registration](https://osf.io/3xkht/overview)
+
 ## Provided research assistance to
 ---
-
 - Anna Folke Larsen & Afonso Saraiva Câmara Leme & Marianne Simonsen, 2020. "Pupil Well-being in Danish Primary and Lower Secondary Schools", Economics Working Papers 2020-13, Department of Economics and Business Economics, Aarhus University. [Link](https://pure.au.dk/ws/portalfiles/portal/197307129/wp20_13.pdf)
 - Anna Folke Larsen, and Marianne Simonsen (2021): "Social emotional learning in the classroom: One-year follow-up results from PERSPEKT 2.0", Economics Working Papers 2021-06, Department of Economics and Business Economics, Aarhus University. [Link](https://pure.au.dk/ws/portalfiles/portal/216384802/wp21_06.pdf). For short-term results, [Link](https://childresearch.au.dk/fileadmin/childresearch/dokumenter/Publikationer/Perspect_Eval_august_26_2020_working_paper.pdf)
 - Susanna Loeb, Michala Iben Riis-Vestergaard, and Marianne Simonsen (2023): "Supporting Language Development through a Texting Program: Initial Results from Denmark". [Link](https://pure.au.dk/ws/portalfiles/portal/306565594/wp23_01.pdf)
