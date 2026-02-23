@@ -12,13 +12,13 @@ author_profile: true
 
 ## Working Papers
 ---
-- **How Initial Accommodation Shapes Refugee Integration: Quasi-Experimental Evidence from the Ukrainian Displacement Crisis in Denmark**
+- **How Initial Accommodation Shapes Refugee Integration: Quasi-Experimental Evidence from the Ukrainian Displacement Crisis in Denmark**  
   *[Mette Foged](https://rockwoolfonden.dk/medarbejdere/mette-foged/), [Jens Hainmueller](https://j-hai.github.io/), Mikkel Stahlschmidt, and [Edith Zink](https://zinked.github.io/)*  
   [Working paper](https://www.rfberlin.com/network-paper/how-initial-accommodation-shapes-refugee-integration-quasi-experimental-evidence-from-the-ukrainian-displacement-crisis-in-denmark/)
 
 ## Work in progress
 ---
-- **What do we gain(and lose) from responsive questions? Comparing open-ended survey questions with adaptive probes from an AI interviewer**
+- **What do we gain(and lose) from responsive questions? Comparing open-ended survey questions with adaptive probes from an AI interviewer**  
   *[Hjalmar Alexander Bang Carlsen](https://researchprofiles.ku.dk/da/persons/hjalmar-alexander-bang-carlsen/), [Tobias Priesholm Gårdhus](https://researchprofiles.ku.dk/da/persons/tobias-priesholm-g%C3%A5rdhus/), and Mikkel Stahlschmidt*
   [Pre-registration](https://osf.io/3xkht/overview)
 
