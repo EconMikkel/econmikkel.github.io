@@ -8,6 +8,7 @@ author_profile: false
 
 <div class="page-intro">
   <p>Here you can find my research, including working papers, ongoing projects and (eventually) publications.</p>
+  <p><a href="{{ '/files/research-overview.pdf' | relative_url }}">Download the one-page research overview (PDF)</a> for a short non-technical summary.</p>
 </div>
 
 {% for section in site.data.research.sections %}

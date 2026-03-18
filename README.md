@@ -5,6 +5,7 @@ This site has been simplified to three editing workflows:
 1. Update homepage news in `_data/news.yml`
 2. Update publications and projects in `_data/research.yml`
 3. Publish blog-style notes by adding Markdown files to `_posts/`
+4. Regenerate the overview PDF with `python scripts/generate_research_overview.py`
 
 ## Where to edit
 
@@ -52,6 +53,27 @@ For one-off collaborators, you can still write:
 ```
 
 Supported link types are `paper`, `preregistration`, and `code`.
+
+### Research overview PDF
+
+The downloadable overview lives at `files/research-overview.pdf`.
+Regenerate it after updating your research data with:
+
+```bash
+python scripts/generate_research_overview.py
+```
+
+It is also updated automatically on GitHub whenever you change:
+- `_data/research.yml`
+- `_data/coauthors.yml`
+- `_config.yml`
+
+The PDF only includes content from these research sections:
+- `Journal articles`
+- `Working papers and projects`
+- `Non-academic work`
+
+It ignores older material such as `Older projects and research assistance contribution`.
 
 ### Notes and blog posts
 

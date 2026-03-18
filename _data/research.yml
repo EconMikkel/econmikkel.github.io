@@ -37,7 +37,23 @@ sections:
 
   - title: "Non-academic work"
     description: "Policy notes, reports, and applied writing."
+    empty_message: "No content added yet."
+    items: []
+
+  - title: "Older projects and research assistance contribution"
+    description: "Projects where I contributed research assistance or analysis support before ph.d.."
     items:
+      - title: "Supporting Language Development through a Texting Program: Initial Results from Denmark"
+        year: 2023
+        venue: "Working paper"
+        authors:
+          - name: "Susanna Loeb"
+          - name: "Michala Iben Riis-Vestergaard"
+          - name: "Marianne Simonsen"
+        links:
+          - label: "Paper"
+            type: "paper"
+            url: "https://pure.au.dk/ws/portalfiles/portal/306565594/wp23_01.pdf"
       - title: "Pre-Analysis Plan: Evaluation of a vocational school initiative to increase graduation"
         year: 2022
         venue: "Social Science Registry"
@@ -51,42 +67,6 @@ sections:
           - label: "Pre-registration"
             type: "preregistration"
             url: "https://www.socialscienceregistry.org/trials/9606"
-      - title: "Teknisk note bag TipsByText RFI Indsigt December 2020"
-        year: 2020
-        venue: "ROCKWOOL Foundation Interventions Unit"
-        authors:
-          - name: "Signe Haahr Petersen"
-          - name: "Mikkel Stahlschmidt"
-        links:
-          - label: "Technical note"
-            type: "paper"
-            url: "https://rockwoolfonden.s3.eu-central-1.amazonaws.com/wp-content/uploads/2020/12/RFI-Teknisk-Note_TipsByText_december-2020.pdf?download=true"
-      - title: "Baggrundsnotat: Analyse af Baumols syge i dansk økonomi"
-        year: 2017
-        venue: "DØR Fall report"
-        authors:
-          - name: "Nikolaj Lodberg Andersen"
-          - name: "Mikkel Stahlschmidt"
-          - name: "Niklas Brønager"
-        links:
-          - label: "Report"
-            type: "paper"
-            url: "https://dors.dk/vismandsrapporter/dansk-oekonomi-efteraar-2017"
-
-  - title: "Research assistance and collaboration"
-    description: "Projects where I contributed research assistance or analysis support."
-    items:
-      - title: "Supporting Language Development through a Texting Program: Initial Results from Denmark"
-        year: 2023
-        venue: "Working paper"
-        authors:
-          - name: "Susanna Loeb"
-          - name: "Michala Iben Riis-Vestergaard"
-          - name: "Marianne Simonsen"
-        links:
-          - label: "Paper"
-            type: "paper"
-            url: "https://pure.au.dk/ws/portalfiles/portal/306565594/wp23_01.pdf"
       - title: "Social emotional learning in the classroom: One-year follow-up results from PERSPEKT 2.0"
         year: 2021
         venue: "Economics Working Papers 2021-06, Department of Economics and Business Economics, Aarhus University"
@@ -111,3 +91,24 @@ sections:
           - label: "Paper"
             type: "paper"
             url: "https://pure.au.dk/ws/portalfiles/portal/197307129/wp20_13.pdf"
+      - title: "Teknisk note bag TipsByText RFI Indsigt December 2020"
+        year: 2020
+        venue: "ROCKWOOL Foundation Interventions Unit"
+        authors:
+          - name: "Signe Haahr Petersen"
+          - name: "Mikkel Stahlschmidt"
+        links:
+          - label: "Technical note"
+            type: "paper"
+            url: "https://rockwoolfonden.s3.eu-central-1.amazonaws.com/wp-content/uploads/2020/12/RFI-Teknisk-Note_TipsByText_december-2020.pdf?download=true"
+      - title: "Baggrundsnotat: Analyse af Baumols syge i dansk økonomi"
+        year: 2017
+        venue: "DØR Fall report"
+        authors:
+          - name: "Nikolaj Lodberg Andersen"
+          - name: "Mikkel Stahlschmidt"
+          - name: "Niklas Brønager"
+        links:
+          - label: "Report"
+            type: "paper"
+            url: "https://dors.dk/vismandsrapporter/dansk-oekonomi-efteraar-2017"
