@@ -12,13 +12,10 @@ sections:
         status: "In press"
         venue: "ROCKWOOL Foundation Berlin working paper"
         authors:
-          - name: "Mette Foged"
-            url: "https://rockwoolfonden.dk/medarbejdere/mette-foged/"
-          - name: "Jens Hainmueller"
-            url: "https://j-hai.github.io/"
+          - key: "mette_foged"
+          - key: "jens_hainmueller"
           - name: "Mikkel Stahlschmidt"
-          - name: "Edith Zink"
-            url: "https://zinked.github.io/"
+          - key: "edith_zink"
         summary: "Quasi-experimental evidence on how initial accommodation conditions shape refugee integration outcomes."
         links:
           - label: "Working paper"
@@ -28,10 +25,8 @@ sections:
         status: "Pre-registered project"
         venue: "Open Science Framework"
         authors:
-          - name: "Hjalmar Alexander Bang Carlsen"
-            url: "https://researchprofiles.ku.dk/da/persons/hjalmar-alexander-bang-carlsen/"
-          - name: "Tobias Priesholm Gårdhus"
-            url: "https://researchprofiles.ku.dk/da/persons/tobias-priesholm-g%C3%A5rdhus/"
+          - key: "hjalmar_carlsen"
+          - key: "tobias_gardhus"
           - name: "Mikkel Stahlschmidt"
         summary: "A project comparing traditional open-ended survey questions with adaptive AI-assisted interviewing."
         links:

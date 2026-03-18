@@ -6,7 +6,17 @@
       {% if entry.authors %}
         <p class="research-entry__authors">
           {% for author in entry.authors %}
-            {% if author.url %}
+            {% if author.key %}
+              {% assign coauthor = site.data.coauthors[author.key] %}
+            {% else %}
+              {% assign coauthor = nil %}
+            {% endif %}
+
+            {% if coauthor and coauthor.url %}
+              <a href="{{ coauthor.url }}">{{ coauthor.name }}</a>
+            {% elsif coauthor %}
+              {{ coauthor.name }}
+            {% elsif author.url %}
               <a href="{{ author.url }}">{{ author.name }}</a>
             {% else %}
               {{ author.name }}

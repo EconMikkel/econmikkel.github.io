@@ -31,8 +31,7 @@ Add items under the relevant section in `_data/research.yml`:
   status: "Working paper"
   venue: "Series or journal"
   authors:
-    - name: "Co-author Name"
-      url: "https://coauthor-site.example"
+    - key: "mette_foged"
     - name: "Mikkel Stahlschmidt"
   summary: "Short description."
   links:
@@ -40,6 +39,14 @@ Add items under the relevant section in `_data/research.yml`:
       url: "https://example.com/paper"
     - label: "Code"
       url: "https://github.com/..."
+```
+
+Frequent co-authors can be defined once in `_data/coauthors.yml` and then reused with `key`.
+For one-off collaborators, you can still write:
+
+```yml
+- name: "Co-author Name"
+  url: "https://coauthor-site.example"
 ```
 
 ### Notes and blog posts
