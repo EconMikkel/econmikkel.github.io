@@ -11,7 +11,3 @@ Gemfile.lock
 # Ingore files created by npm
 node_modules
 package-lock.json
-
-# Ignore local LaTeX build byproducts for the research overview
-files/*.aux
-files/*.log

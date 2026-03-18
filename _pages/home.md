@@ -18,7 +18,6 @@ redirect_from:
     <div class="home-actions">
       <a class="home-button home-button--primary" href="{{ '/research/' | relative_url }}">View research</a>
       <a class="home-button home-button--ghost" href="{{ '/notes/' | relative_url }}">Browse notes</a>
-      <a class="home-button home-button--ghost" href="{{ '/files/research-overview.pdf' | relative_url }}">Research overview (PDF)</a>
     </div>
   </div>
 
