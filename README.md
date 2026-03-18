@@ -36,8 +36,10 @@ Add items under the relevant section in `_data/research.yml`:
   summary: "Short description."
   links:
     - label: "Paper"
+      type: "paper"
       url: "https://example.com/paper"
     - label: "Code"
+      type: "code"
       url: "https://github.com/..."
 ```
 
@@ -48,6 +50,8 @@ For one-off collaborators, you can still write:
 - name: "Co-author Name"
   url: "https://coauthor-site.example"
 ```
+
+Supported link types are `paper`, `preregistration`, and `code`.
 
 ### Notes and blog posts
 

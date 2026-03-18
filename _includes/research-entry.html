@@ -47,7 +47,25 @@
   {% if entry.links %}
     <ul class="link-chips">
       {% for link in entry.links %}
-        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+        {% assign link_type = link.type | default: "" | downcase %}
+        {% assign link_label = link.label | default: "" | downcase %}
+        {% assign link_url = link.url | default: "" | downcase %}
+        {% assign icon_class = "fa-solid fa-arrow-up-right-from-square" %}
+
+        {% if link_type == "paper" or link_label contains "paper" or link_label contains "working paper" or link_label contains "report" %}
+          {% assign icon_class = "fa-solid fa-file-lines" %}
+        {% elsif link_type == "preregistration" or link_type == "pre-registration" or link_label contains "pre-registration" or link_label contains "pre registration" or link_label contains "registry" or link_url contains "osf.io" or link_url contains "socialscienceregistry.org" %}
+          {% assign icon_class = "fa-solid fa-clipboard-check" %}
+        {% elsif link_type == "code" or link_label contains "code" or link_label contains "replication" or link_url contains "github.com" %}
+          {% assign icon_class = "fa-solid fa-code" %}
+        {% endif %}
+
+        <li>
+          <a href="{{ link.url }}">
+            <i class="{{ icon_class }}" aria-hidden="true"></i>
+            <span>{{ link.label }}</span>
+          </a>
+        </li>
       {% endfor %}
     </ul>
   {% endif %}

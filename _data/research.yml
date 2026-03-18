@@ -19,6 +19,7 @@ sections:
         summary: "Quasi-experimental evidence on how initial accommodation conditions shape refugee integration outcomes."
         links:
           - label: "Working paper"
+            type: "paper"
             url: "https://www.rfberlin.com/network-paper/how-initial-accommodation-shapes-refugee-integration-quasi-experimental-evidence-from-the-ukrainian-displacement-crisis-in-denmark/"
       - title: "What do we gain (and lose) from responsive questions? Comparing open-ended survey questions with adaptive probes from an AI interviewer"
         year: 2026
@@ -31,6 +32,7 @@ sections:
         summary: "A project comparing traditional open-ended survey questions with adaptive AI-assisted interviewing."
         links:
           - label: "Pre-registration"
+            type: "preregistration"
             url: "https://osf.io/3xkht/overview"
 
   - title: "Non-academic work"
@@ -47,6 +49,7 @@ sections:
           - name: "Mikkel Stahlschmidt"
         links:
           - label: "Pre-registration"
+            type: "preregistration"
             url: "https://www.socialscienceregistry.org/trials/9606"
       - title: "Teknisk note bag TipsByText RFI Indsigt December 2020"
         year: 2020
@@ -56,6 +59,7 @@ sections:
           - name: "Mikkel Stahlschmidt"
         links:
           - label: "Technical note"
+            type: "paper"
             url: "https://rockwoolfonden.s3.eu-central-1.amazonaws.com/wp-content/uploads/2020/12/RFI-Teknisk-Note_TipsByText_december-2020.pdf?download=true"
       - title: "Baggrundsnotat: Analyse af Baumols syge i dansk økonomi"
         year: 2017
@@ -66,6 +70,7 @@ sections:
           - name: "Niklas Brønager"
         links:
           - label: "Report"
+            type: "paper"
             url: "https://dors.dk/vismandsrapporter/dansk-oekonomi-efteraar-2017"
 
   - title: "Research assistance and collaboration"
@@ -80,6 +85,7 @@ sections:
           - name: "Marianne Simonsen"
         links:
           - label: "Paper"
+            type: "paper"
             url: "https://pure.au.dk/ws/portalfiles/portal/306565594/wp23_01.pdf"
       - title: "Social emotional learning in the classroom: One-year follow-up results from PERSPEKT 2.0"
         year: 2021
@@ -89,8 +95,10 @@ sections:
           - name: "Marianne Simonsen"
         links:
           - label: "Paper - Short-term results"
+            type: "paper"
             url: "https://childresearch.au.dk/fileadmin/childresearch/dokumenter/Publikationer/Perspect_Eval_august_26_2020_working_paper.pdf"
           - label: "Paper - One-year follow-up"
+            type: "paper"
             url: "https://pure.au.dk/ws/portalfiles/portal/216384802/wp21_06.pdf"
       - title: "Pupil Well-being in Danish Primary and Lower Secondary Schools"
         year: 2020
@@ -101,4 +109,5 @@ sections:
           - name: "Marianne Simonsen"
         links:
           - label: "Paper"
+            type: "paper"
             url: "https://pure.au.dk/ws/portalfiles/portal/197307129/wp20_13.pdf"

@@ -166,7 +166,7 @@ h6,
   display: grid;
   gap: 1.5rem;
   grid-template-columns: minmax(0, 1.8fr) minmax(280px, 1fr);
-  margin: 1rem 0 2.2rem;
+  margin: 0.75rem 0 1.1rem;
 }
 
 .home-hero__content,
@@ -299,7 +299,7 @@ h6,
 }
 
 .home-section {
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.1rem;
 }
 
 .section-heading {
@@ -307,7 +307,7 @@ h6,
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .section-heading h2,
@@ -452,11 +452,18 @@ h6,
   border-radius: 999px;
   color: var(--accent-dark);
   display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: "Alegreya Sans", "Helvetica Neue", sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   padding: 0.5rem 0.85rem;
   text-decoration: none;
+}
+
+.link-chips i {
+  font-size: 0.9rem;
+  opacity: 0.85;
 }
 
 .link-chips a:hover,
