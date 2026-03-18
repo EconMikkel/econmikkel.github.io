@@ -60,6 +60,7 @@ The downloadable overview lives at `files/research-overview.pdf`.
 Regenerate it after updating your research data with:
 
 ```bash
+python -m pip install pyyaml reportlab
 python scripts/generate_research_overview.py
 ```
 
@@ -74,6 +75,7 @@ The PDF only includes content from these research sections:
 - `Non-academic work`
 
 It ignores older material such as `Older projects and research assistance contribution`.
+The PDF uses compact one-line summaries generated from each item's summary field or, if missing, from basic item metadata.
 
 ### Notes and blog posts
 

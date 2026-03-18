@@ -41,7 +41,12 @@
   </div>
 
   {% if entry.summary %}
-    <p class="research-entry__summary">{{ entry.summary }}</p>
+    <details class="research-summary">
+      <summary class="research-summary__toggle">Read summary</summary>
+      <div class="research-summary__body">
+        <p class="research-entry__summary">{{ entry.summary }}</p>
+      </div>
+    </details>
   {% endif %}
 
   {% if entry.links %}
