@@ -1,0 +1,16 @@
+{% if include.limit %}
+  {% assign news_items = site.data.news | slice: 0, include.limit %}
+{% else %}
+  {% assign news_items = site.data.news %}
+{% endif %}
+
+{% for item in news_items %}
+  <article class="news-item">
+    <p class="news-item__date">{{ item.date | date: "%B %-d, %Y" }}</p>
+    <h3 class="news-item__title">{{ item.title }}</h3>
+    <div class="news-item__body">{{ item.body | markdownify }}</div>
+    {% if item.link %}
+      <p><a class="note-card__link" href="{{ item.link.url }}">{{ item.link.label }}</a></p>
+    {% endif %}
+  </article>
+{% endfor %}

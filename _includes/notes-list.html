@@ -1,0 +1,20 @@
+{% if include.limit %}
+  {% assign notes_posts = site.posts | slice: 0, include.limit %}
+{% else %}
+  {% assign notes_posts = site.posts %}
+{% endif %}
+
+{% if notes_posts.size > 0 %}
+  {% for post in notes_posts %}
+    <article class="note-card">
+      <p class="note-card__date">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {% if post.excerpt %}
+        <p>{{ post.excerpt | strip_html | strip_newlines }}</p>
+      {% endif %}
+      <a class="note-card__link" href="{{ post.url | relative_url }}">Read note</a>
+    </article>
+  {% endfor %}
+{% else %}
+  <p class="empty-state">No notes published yet. Add your first post in <code>_posts/</code> when you are ready.</p>
+{% endif %}

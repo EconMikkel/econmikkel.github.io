@@ -1,0 +1,44 @@
+{% assign entry = include.item %}
+<article class="research-entry">
+  <div class="research-entry__header">
+    <div>
+      <h3 class="research-entry__title">{{ entry.title }}</h3>
+      {% if entry.authors %}
+        <p class="research-entry__authors">
+          {% for author in entry.authors %}
+            {% if author.url %}
+              <a href="{{ author.url }}">{{ author.name }}</a>
+            {% else %}
+              {{ author.name }}
+            {% endif %}
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </p>
+      {% endif %}
+      {% if entry.venue %}
+        <p class="research-entry__venue">{{ entry.venue }}</p>
+      {% endif %}
+    </div>
+
+    <div class="research-entry__meta">
+      {% if entry.year %}
+        <span class="research-entry__year">{{ entry.year }}</span>
+      {% endif %}
+      {% if entry.status %}
+        <span class="entry-pill">{{ entry.status }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if entry.summary %}
+    <p class="research-entry__summary">{{ entry.summary }}</p>
+  {% endif %}
+
+  {% if entry.links %}
+    <ul class="link-chips">
+      {% for link in entry.links %}
+        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>
