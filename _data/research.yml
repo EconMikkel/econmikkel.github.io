@@ -47,6 +47,18 @@ sections:
           - label: "Pre-registration"
             type: "preregistration"
             url: "https://osf.io/qakfd/overview"
+      - title: "Networks, Neighborhoods, and New Beginnings: Evidence on Refugee Labor Market Entry from Local Housing Allocation in Sweden"
+        year: 2026
+        status: "Working paper"
+        venue: "Institute for Policy Research discussion paper"
+        authors:
+          - name: "Katja Kaj"
+          - name: "Bente Bent"
+        summary: "FAKE TEST PAPER - Refugee reception systems often assign newly arrived individuals to local housing under severe capacity constraints, with lasting consequences for economic and social integration. We study how initial neighborhood placement shapes early labor market entry among refugees arriving in Sweden between 2018 and 2024. Using linked administrative records on housing assignments, employment, earnings, education enrollment, and family composition, we follow refugees from arrival through the first two years after settlement. We combine rich location data with institutional detail on municipal allocation procedures to identify plausibly exogenous variation in initial placement across neighborhoods within the same local labor market. Relative to placement in lower employment neighborhoods, assignment to areas with stronger labor demand and denser co-ethnic networks increases employment and earnings within the first year, with particularly large effects for women and for refugees with school-age children. We show that these gains are not driven solely by mobility after placement; instead, early access to local information, job referrals, and public services appears to play a central role. The results indicate that fine-grained housing allocation decisions shape integration trajectories in ways that persist beyond the immediate reception period."
+        links:
+          - label: "Working paper"
+            type: "paper"
+            url: "https://example.org/working-paper/refugee-labor-market-entry-sweden"
 
   - title: "Non-academic work"
     description: "Policy notes, reports, and applied writing."
