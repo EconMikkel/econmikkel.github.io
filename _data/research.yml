@@ -19,7 +19,7 @@ sections:
           - name: "Mikkel Stahlschmidt"
           - name: "Edith Zink"
             url: "https://zinked.github.io/"
-        summary: "Quasi-experimental evidence on how placement and initial accommodation conditions shape refugee integration outcomes."
+        summary: "Quasi-experimental evidence on how initial accommodation conditions shape refugee integration outcomes."
         links:
           - label: "Working paper"
             url: "https://www.rfberlin.com/network-paper/how-initial-accommodation-shapes-refugee-integration-quasi-experimental-evidence-from-the-ukrainian-displacement-crisis-in-denmark/"
@@ -41,25 +41,6 @@ sections:
   - title: "Non-academic work"
     description: "Policy notes, reports, and applied writing."
     items:
-      - title: "Baggrundsnotat: Analyse af Baumols syge i dansk økonomi"
-        year: 2017
-        venue: "DØR Fall report"
-        authors:
-          - name: "Nikolaj Lodberg Andersen"
-          - name: "Mikkel Stahlschmidt"
-          - name: "Niklas Brønager"
-        links:
-          - label: "Report"
-            url: "https://dors.dk/vismandsrapporter/dansk-oekonomi-efteraar-2017"
-      - title: "Teknisk note bag TipsByText RFI Indsigt December 2020"
-        year: 2020
-        venue: "ROCKWOOL Foundation Interventions Unit"
-        authors:
-          - name: "Signe Haahr Petersen"
-          - name: "Mikkel Stahlschmidt"
-        links:
-          - label: "Technical note"
-            url: "https://rockwoolfonden.s3.eu-central-1.amazonaws.com/wp-content/uploads/2020/12/RFI-Teknisk-Note_TipsByText_december-2020.pdf?download=true"
       - title: "Pre-Analysis Plan: Evaluation of a vocational school initiative to increase graduation"
         year: 2022
         venue: "Social Science Registry"
@@ -70,33 +51,31 @@ sections:
           - name: "Marcos Vera-Hernandez"
           - name: "Mikkel Stahlschmidt"
         links:
-          - label: "Registry entry"
+          - label: "Pre-registration"
             url: "https://www.socialscienceregistry.org/trials/9606"
+      - title: "Teknisk note bag TipsByText RFI Indsigt December 2020"
+        year: 2020
+        venue: "ROCKWOOL Foundation Interventions Unit"
+        authors:
+          - name: "Signe Haahr Petersen"
+          - name: "Mikkel Stahlschmidt"
+        links:
+          - label: "Technical note"
+            url: "https://rockwoolfonden.s3.eu-central-1.amazonaws.com/wp-content/uploads/2020/12/RFI-Teknisk-Note_TipsByText_december-2020.pdf?download=true"
+      - title: "Baggrundsnotat: Analyse af Baumols syge i dansk økonomi"
+        year: 2017
+        venue: "DØR Fall report"
+        authors:
+          - name: "Nikolaj Lodberg Andersen"
+          - name: "Mikkel Stahlschmidt"
+          - name: "Niklas Brønager"
+        links:
+          - label: "Report"
+            url: "https://dors.dk/vismandsrapporter/dansk-oekonomi-efteraar-2017"
 
   - title: "Research assistance and collaboration"
     description: "Projects where I contributed research assistance or analysis support."
     items:
-      - title: "Pupil Well-being in Danish Primary and Lower Secondary Schools"
-        year: 2020
-        venue: "Economics Working Papers 2020-13, Department of Economics and Business Economics, Aarhus University"
-        authors:
-          - name: "Anna Folke Larsen"
-          - name: "Afonso Saraiva Câmara Leme"
-          - name: "Marianne Simonsen"
-        links:
-          - label: "Paper"
-            url: "https://pure.au.dk/ws/portalfiles/portal/197307129/wp20_13.pdf"
-      - title: "Social emotional learning in the classroom: One-year follow-up results from PERSPEKT 2.0"
-        year: 2021
-        venue: "Economics Working Papers 2021-06, Department of Economics and Business Economics, Aarhus University"
-        authors:
-          - name: "Anna Folke Larsen"
-          - name: "Marianne Simonsen"
-        links:
-          - label: "One-year follow-up"
-            url: "https://pure.au.dk/ws/portalfiles/portal/216384802/wp21_06.pdf"
-          - label: "Short-term results"
-            url: "https://childresearch.au.dk/fileadmin/childresearch/dokumenter/Publikationer/Perspect_Eval_august_26_2020_working_paper.pdf"
       - title: "Supporting Language Development through a Texting Program: Initial Results from Denmark"
         year: 2023
         venue: "Working paper"
@@ -107,3 +86,24 @@ sections:
         links:
           - label: "Paper"
             url: "https://pure.au.dk/ws/portalfiles/portal/306565594/wp23_01.pdf"
+      - title: "Social emotional learning in the classroom: One-year follow-up results from PERSPEKT 2.0"
+        year: 2021
+        venue: "Economics Working Papers 2021-06, Department of Economics and Business Economics, Aarhus University"
+        authors:
+          - name: "Anna Folke Larsen"
+          - name: "Marianne Simonsen"
+        links:
+          - label: "Paper - Short-term results"
+            url: "https://childresearch.au.dk/fileadmin/childresearch/dokumenter/Publikationer/Perspect_Eval_august_26_2020_working_paper.pdf"
+          - label: "Paper - One-year follow-up"
+            url: "https://pure.au.dk/ws/portalfiles/portal/216384802/wp21_06.pdf"
+      - title: "Pupil Well-being in Danish Primary and Lower Secondary Schools"
+        year: 2020
+        venue: "Economics Working Papers 2020-13, Department of Economics and Business Economics, Aarhus University"
+        authors:
+          - name: "Anna Folke Larsen"
+          - name: "Afonso Saraiva Câmara Leme"
+          - name: "Marianne Simonsen"
+        links:
+          - label: "Paper"
+            url: "https://pure.au.dk/ws/portalfiles/portal/197307129/wp20_13.pdf"

@@ -15,7 +15,7 @@ author:
   location: "Copenhagen, Denmark"
   email: "mis@rfintervention.dk"
   cv: "CV__English.pdf"
-  googlescholar: "https://scholar.google.com/citations?hl=da&user=ITvk0PcAAAAJ"
+  googlescholar: "https://scholar.google.com/citations?user=VfLh5XEAAAAJ"
   orcid: "https://orcid.org/0009-0007-2392-6470"
   bluesky: "mstahlschmidt.bsky.social"
 
@@ -38,7 +38,7 @@ social:
   type: "Person"
   name: "Mikkel Stahlschmidt"
   links:
-    - "https://scholar.google.com/citations?hl=da&user=VfLh5XEAAAAJ"
+    - "https://scholar.google.com/citations?user=VfLh5XEAAAAJ"
     - "https://orcid.org/0009-0007-2392-6470"
 
 include:

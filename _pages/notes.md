@@ -7,7 +7,7 @@ author_profile: false
 ---
 
 <div class="page-intro">
-  <p>This section is for blog-style posts: smaller analysis projects, questions, notes on methods, or anything else that does not belong in the formal research list. Publish a new note by adding a Markdown file to <code>_posts/</code>.</p>
+  <p>This section is for blog-style posts: smaller analysis projects, musings, or similar. This is not peer-reviewed and by no means "formal" research.</p>
 </div>
 
 <div class="home-grid home-grid--notes">
