@@ -11,15 +11,13 @@ redirect_from:
 
 <section class="home-hero">
   <div class="home-hero__content">
-    <p class="home-kicker">Economics research and applied notes</p>
     <h1 class="home-hero__title">{{ site.author.name }}</h1>
     <p class="home-lead">{{ site.author.bio }}</p>
-    <p class="home-lead">This site brings together current research, academic writing, and shorter notes on methods, data, and policy questions.</p>
+    <p class="home-lead">This site brings together my current research, academic writing, and shorter notes on methods, data, and policy questions.</p>
 
     <div class="home-actions">
       <a class="home-button home-button--primary" href="{{ '/research/' | relative_url }}">View research</a>
       <a class="home-button home-button--ghost" href="{{ '/notes/' | relative_url }}">Browse notes</a>
-      <a class="home-button home-button--ghost" href="{{ '/files/' | append: site.author.cv | relative_url }}">Download CV</a>
     </div>
   </div>
 
@@ -50,8 +48,7 @@ redirect_from:
 <section class="home-section">
   <div class="section-heading">
     <div>
-      <h2>Latest news</h2>
-      <p>Short updates from the front page are managed in <code>_data/news.yml</code>.</p>
+      <h2>New news</h2>
     </div>
   </div>
 
@@ -64,7 +61,7 @@ redirect_from:
   <div class="section-heading">
     <div>
       <h2>Recent notes</h2>
-      <p>For smaller analyses, open questions, and blog-style writing.</p>
+      <p>Smaller analyses, open questions, and blog-style writing.</p>
     </div>
     <a href="{{ '/notes/' | relative_url }}">See all notes</a>
   </div>

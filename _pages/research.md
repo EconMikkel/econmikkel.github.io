@@ -7,7 +7,7 @@ author_profile: false
 ---
 
 <div class="page-intro">
-  <p>This page is driven by a single data file: <code>_data/research.yml</code>. Add a new paper to the relevant section, include co-authors and links, and it will appear here automatically.</p>
+  <p>Here you can find my research, including working papers, ongoing projects and (eventually) publications.</p>
 </div>
 
 {% for section in site.data.research.sections %}
