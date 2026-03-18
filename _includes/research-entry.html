@@ -50,14 +50,14 @@
         {% assign link_type = link.type | default: "" | downcase %}
         {% assign link_label = link.label | default: "" | downcase %}
         {% assign link_url = link.url | default: "" | downcase %}
-        {% assign icon_class = "fa-solid fa-arrow-up-right-from-square" %}
+        {% assign icon_class = "fas fa-external-link-alt" %}
 
         {% if link_type == "paper" or link_label contains "paper" or link_label contains "working paper" or link_label contains "report" %}
-          {% assign icon_class = "fa-solid fa-file-lines" %}
+          {% assign icon_class = "fas fa-file-alt" %}
         {% elsif link_type == "preregistration" or link_type == "pre-registration" or link_label contains "pre-registration" or link_label contains "pre registration" or link_label contains "registry" or link_url contains "osf.io" or link_url contains "socialscienceregistry.org" %}
-          {% assign icon_class = "fa-solid fa-clipboard-check" %}
+          {% assign icon_class = "fas fa-clipboard-list" %}
         {% elsif link_type == "code" or link_label contains "code" or link_label contains "replication" or link_url contains "github.com" %}
-          {% assign icon_class = "fa-solid fa-code" %}
+          {% assign icon_class = "fas fa-code" %}
         {% endif %}
 
         <li>
