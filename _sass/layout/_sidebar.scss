@@ -153,6 +153,21 @@
   }
 }
 
+.author__affiliations {
+  margin: 5px 0 0 0;
+  padding-left: 1.2em;
+  font-size: $type-size-6;
+  list-style-type: disc;
+
+  li {
+    margin-bottom: 2px;
+  }
+
+  @include breakpoint($large) {
+    margin-bottom: 15px;
+  }
+}
+
 .author__urls-wrapper {
   position: relative;
   display: table-cell;
