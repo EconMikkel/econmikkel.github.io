@@ -70,11 +70,3 @@ Write the post here.
 
 There is also a starter draft in `_drafts/note-template.md`.
 
-## Running locally
-
-```bash
-bundle install
-bundle exec jekyll serve
-```
-
-The site is usually available at `http://127.0.0.1:4000`.

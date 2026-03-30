@@ -26,8 +26,12 @@ redirect_from:
 
     <div class="home-profile__list">
       <div class="home-profile__row">
-        <span class="home-profile__label">Affiliation</span>
-        <span class="home-profile__value">{{ site.author.employer }}</span>
+        <span class="home-profile__label">Affiliations</span>
+        <span class="home-profile__value">
+          {% for emp in site.author.employer %}
+            {{ emp }}{% unless forloop.last %}<br>{% endunless %}
+          {% endfor %}
+        </span>
       </div>
       <div class="home-profile__row">
         <span class="home-profile__label">Location</span>
