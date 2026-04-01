@@ -49,6 +49,18 @@
     </details>
   {% endif %}
 
+  {% if entry.bibtex %}
+    <details class="research-bibtex">
+      <summary class="research-bibtex__toggle">BibTeX</summary>
+      <div class="research-bibtex__body">
+        <button class="research-bibtex__copy" onclick="navigator.clipboard.writeText(this.nextElementSibling.textContent.trim())" aria-label="Copy BibTeX">
+          <i class="fas fa-copy" aria-hidden="true"></i> Copy
+        </button>
+        <pre class="research-bibtex__code"><code>{{ entry.bibtex | strip }}</code></pre>
+      </div>
+    </details>
+  {% endif %}
+
   {% if entry.links %}
     <ul class="link-chips">
       {% for link in entry.links %}
@@ -57,9 +69,7 @@
         {% assign link_url = link.url | default: "" | downcase %}
         {% assign icon_class = "fas fa-external-link-alt" %}
 
-        {% if link_type == "doi" or link_label contains "doi" or link_url contains "doi.org" %}
-          {% assign icon_class = "fas fa-link" %}
-        {% elsif link_type == "paper" or link_label contains "paper" or link_label contains "working paper" or link_label contains "report" %}
+        {% if link_type == "paper" or link_label contains "paper" or link_label contains "working paper" or link_label contains "report" %}
           {% assign icon_class = "fas fa-file-alt" %}
         {% elsif link_type == "preregistration" or link_type == "pre-registration" or link_label contains "pre-registration" or link_label contains "pre registration" or link_label contains "registry" or link_url contains "osf.io" or link_url contains "socialscienceregistry.org" %}
           {% assign icon_class = "fas fa-clipboard-list" %}
