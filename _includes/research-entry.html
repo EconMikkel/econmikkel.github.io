@@ -84,16 +84,17 @@
       {% endif %}
 
       {% if entry.bibtex %}
-        <details class="research-bibtex">
-          <summary class="research-bibtex__toggle">BibTeX</summary>
-          <div class="research-bibtex__body">
-            <button class="research-bibtex__copy" onclick="var b=this;navigator.clipboard.writeText(this.closest('.research-bibtex__body').querySelector('pre').textContent.trim());b.textContent='Copied!';setTimeout(function(){b.innerHTML='<i class=\'fas fa-copy\' aria-hidden=\'true\'></i> Copy'},1500)" aria-label="Copy BibTeX">
-              <i class="fas fa-copy" aria-hidden="true"></i> Copy
-            </button>
-            <pre class="research-bibtex__code">{{ entry.bibtex | strip }}</pre>
-          </div>
-        </details>
+        <button class="research-bibtex__toggle" onclick="var body=this.closest('.research-entry').querySelector('.research-bibtex__body');body.hidden=!body.hidden;this.setAttribute('aria-expanded',!body.hidden)" aria-expanded="false">BibTeX</button>
       {% endif %}
+    </div>
+  {% endif %}
+
+  {% if entry.bibtex %}
+    <div class="research-bibtex__body" hidden>
+      <button class="research-bibtex__copy" onclick="var b=this;navigator.clipboard.writeText(this.closest('.research-bibtex__body').querySelector('pre').textContent.trim());b.textContent='Copied!';setTimeout(function(){b.innerHTML='<i class=\'fas fa-copy\' aria-hidden=\'true\'></i> Copy'},1500)" aria-label="Copy BibTeX">
+        <i class="fas fa-copy" aria-hidden="true"></i> Copy
+      </button>
+      <pre class="research-bibtex__code">{{ entry.bibtex | strip }}</pre>
     </div>
   {% endif %}
 </article>

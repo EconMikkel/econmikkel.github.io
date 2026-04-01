@@ -504,6 +504,7 @@ body {
 .research-bibtex__toggle {
   align-items: center;
   background: var(--accent-soft);
+  border: none;
   border-radius: 999px;
   color: var(--accent-dark);
   cursor: pointer;
@@ -512,23 +513,8 @@ body {
   font-size: 0.95rem;
   font-weight: 700;
   gap: 0.5rem;
-  list-style: none;
   padding: 0.5rem 0.85rem;
   text-decoration: none;
-}
-
-.research-bibtex__toggle::-webkit-details-marker {
-  display: none;
-}
-
-.research-bibtex__toggle::after {
-  content: "+";
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.research-bibtex[open] .research-bibtex__toggle::after {
-  content: "\2212";
 }
 
 .research-bibtex__toggle:hover,
@@ -541,6 +527,10 @@ body {
   max-width: 100%;
   overflow: hidden;
   position: relative;
+}
+
+.research-bibtex__body[hidden] {
+  display: none;
 }
 
 .research-bibtex__copy {
@@ -569,10 +559,6 @@ body {
 .research-bibtex__copy:hover,
 .research-bibtex__copy:focus {
   background: #ffe3e3;
-}
-
-.research-bibtex[open] {
-  flex-basis: 100%;
 }
 
 .research-bibtex__code {
