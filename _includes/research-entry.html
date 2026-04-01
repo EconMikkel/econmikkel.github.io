@@ -26,7 +26,7 @@
         </p>
       {% endif %}
       {% if entry.venue %}
-        <p class="research-entry__venue">{{ entry.venue }}</p>
+        <p class="research-entry__venue">{{ entry.venue }}{% if entry.series %} · {{ entry.series }}{% endif %}</p>
       {% endif %}
     </div>
 
@@ -57,7 +57,9 @@
         {% assign link_url = link.url | default: "" | downcase %}
         {% assign icon_class = "fas fa-external-link-alt" %}
 
-        {% if link_type == "paper" or link_label contains "paper" or link_label contains "working paper" or link_label contains "report" %}
+        {% if link_type == "doi" or link_label contains "doi" or link_url contains "doi.org" %}
+          {% assign icon_class = "fas fa-link" %}
+        {% elsif link_type == "paper" or link_label contains "paper" or link_label contains "working paper" or link_label contains "report" %}
           {% assign icon_class = "fas fa-file-alt" %}
         {% elsif link_type == "preregistration" or link_type == "pre-registration" or link_label contains "pre-registration" or link_label contains "pre registration" or link_label contains "registry" or link_url contains "osf.io" or link_url contains "socialscienceregistry.org" %}
           {% assign icon_class = "fas fa-clipboard-list" %}
