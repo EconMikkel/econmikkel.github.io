@@ -49,41 +49,51 @@
     </details>
   {% endif %}
 
-  {% if entry.bibtex %}
-    <details class="research-bibtex">
-      <summary class="research-bibtex__toggle">BibTeX</summary>
-      <div class="research-bibtex__body">
-        <button class="research-bibtex__copy" onclick="navigator.clipboard.writeText(this.nextElementSibling.textContent.trim())" aria-label="Copy BibTeX">
-          <i class="fas fa-copy" aria-hidden="true"></i> Copy
-        </button>
-        <pre class="research-bibtex__code"><code>{{ entry.bibtex | strip }}</code></pre>
-      </div>
-    </details>
-  {% endif %}
+  {% if entry.links or entry.bibtex %}
+    <div class="research-entry__actions">
+      {% if entry.links %}
+        {% assign has_primary = false %}
+        {% for link in entry.links %}
+          {% if link.primary %}{% assign has_primary = true %}{% endif %}
+        {% endfor %}
+        <ul class="link-chips">
+          {% for link in entry.links %}
+            {% assign link_type = link.type | default: "" | downcase %}
+            {% assign link_label = link.label | default: "" | downcase %}
+            {% assign link_url = link.url | default: "" | downcase %}
+            {% assign icon_class = "fas fa-external-link-alt" %}
 
-  {% if entry.links %}
-    <ul class="link-chips">
-      {% for link in entry.links %}
-        {% assign link_type = link.type | default: "" | downcase %}
-        {% assign link_label = link.label | default: "" | downcase %}
-        {% assign link_url = link.url | default: "" | downcase %}
-        {% assign icon_class = "fas fa-external-link-alt" %}
+            {% if link_type == "paper" or link_label contains "paper" or link_label contains "working paper" or link_label contains "report" %}
+              {% assign icon_class = "fas fa-file-alt" %}
+            {% elsif link_type == "preregistration" or link_type == "pre-registration" or link_label contains "pre-registration" or link_label contains "pre registration" or link_label contains "registry" or link_url contains "osf.io" or link_url contains "socialscienceregistry.org" %}
+              {% assign icon_class = "fas fa-clipboard-list" %}
+            {% elsif link_type == "code" or link_label contains "code" or link_label contains "replication" or link_url contains "github.com" %}
+              {% assign icon_class = "fas fa-code" %}
+            {% endif %}
 
-        {% if link_type == "paper" or link_label contains "paper" or link_label contains "working paper" or link_label contains "report" %}
-          {% assign icon_class = "fas fa-file-alt" %}
-        {% elsif link_type == "preregistration" or link_type == "pre-registration" or link_label contains "pre-registration" or link_label contains "pre registration" or link_label contains "registry" or link_url contains "osf.io" or link_url contains "socialscienceregistry.org" %}
-          {% assign icon_class = "fas fa-clipboard-list" %}
-        {% elsif link_type == "code" or link_label contains "code" or link_label contains "replication" or link_url contains "github.com" %}
-          {% assign icon_class = "fas fa-code" %}
-        {% endif %}
+            {% assign is_secondary = false %}
+            {% if has_primary and link.primary != true %}{% assign is_secondary = true %}{% endif %}
+            <li{% if is_secondary %} class="link-chip--secondary"{% endif %}>
+              <a href="{{ link.url }}">
+                <span>{{ link.label }}</span>
+                <i class="{{ icon_class }}" aria-hidden="true"></i>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
 
-        <li>
-          <a href="{{ link.url }}">
-            <span>{{ link.label }}</span>
-            <i class="{{ icon_class }}" aria-hidden="true"></i>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+      {% if entry.bibtex %}
+        <details class="research-bibtex">
+          <summary class="research-bibtex__toggle">BibTeX</summary>
+          <div class="research-bibtex__body">
+            <button class="research-bibtex__copy" onclick="var b=this;navigator.clipboard.writeText(this.closest('.research-bibtex__body').querySelector('pre').textContent.trim());b.textContent='Copied!';setTimeout(function(){b.innerHTML='<i class=\'fas fa-copy\' aria-hidden=\'true\'></i> Copy'},1500)" aria-label="Copy BibTeX">
+              <i class="fas fa-copy" aria-hidden="true"></i> Copy
+            </button>
+            <pre class="research-bibtex__code">{{ entry.bibtex | strip }}</pre>
+          </div>
+        </details>
+      {% endif %}
+    </div>
   {% endif %}
 </article>

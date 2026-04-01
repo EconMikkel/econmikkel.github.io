@@ -28,30 +28,60 @@ Add items under the relevant section in `_data/research.yml`:
 ```yml
 - title: "Paper title"
   year: 2026
-  status: "Working paper"
+  status: "Working paper"          # shown as pill badge; omit if not needed
   venue: "Series or journal"
+  series: "Working Paper No. 1"    # optional; appended after venue with " · "
   authors:
-    - key: "mette_foged"
-    - name: "Mikkel Stahlschmidt"
-  summary: "Short description."
+    - key: "mette_foged"           # lookup from _data/coauthors.yml
+    - name: "Mikkel Stahlschmidt"  # inline name (no lookup)
+  summary: "Abstract text. HTML like <i>italics</i> is allowed."
+  bibtex: |
+    @unpublished{key2026,
+      author = {Last, First and Last, First},
+      title  = {Paper Title},
+      year   = {2026},
+      note   = {Working Paper Series No. 1},
+      doi    = {10.xxxxx/xxxxx},
+      url    = {https://example.com}
+    }
   links:
     - label: "Paper"
       type: "paper"
       url: "https://example.com/paper"
-    - label: "Code"
-      type: "code"
-      url: "https://github.com/..."
+      primary: true                # highlighted as the canonical version
+    - label: "Older version"
+      type: "paper"
+      url: "https://example.com/old"
 ```
 
-Frequent co-authors can be defined once in `_data/coauthors.yml` and then reused with `key`.
-For one-off collaborators, you can still write:
+#### Entry types (`@unpublished` vs `@article`)
+
+Use `@unpublished` for working papers, pre-registrations, and anything not yet in a journal. Use `@article` for published journal articles (add `journal`, `volume`, `number`, `pages` fields).
+
+#### Link types
+
+| `type`             | Icon              |
+|--------------------|-------------------|
+| `paper`            | file icon         |
+| `preregistration`  | clipboard icon    |
+| `code`             | code icon         |
+| *(other/omitted)*  | external link     |
+
+#### Primary links
+
+When an entry has multiple links, mark the canonical/newest version with `primary: true`. Non-primary links render with a muted outline style. If no link is marked primary, all links render with the default style.
+
+#### Co-authors
+
+Frequent co-authors are defined once in `_data/coauthors.yml` and reused with `key`:
 
 ```yml
-- name: "Co-author Name"
-  url: "https://coauthor-site.example"
+mette_foged:
+  name: "Mette Foged"
+  url: "https://example.com"
 ```
 
-Supported link types are `paper`, `preregistration`, and `code`.
+For one-off collaborators, use inline `name` (and optional `url`).
 
 ### Notes and blog posts
 

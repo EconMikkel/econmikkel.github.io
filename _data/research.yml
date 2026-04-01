@@ -31,6 +31,7 @@ sections:
           - label: "Working paper"
             type: "paper"
             url: "https://osf.io/preprints/socarxiv/eh9cd_v1"
+            primary: true
           - label: "RFBerlin version"
             type: "paper"
             url: "https://www.rfberlin.com/network-paper/how-initial-accommodation-shapes-refugee-integration-quasi-experimental-evidence-from-the-ukrainian-displacement-crisis-in-denmark/"
@@ -145,6 +146,7 @@ sections:
           - label: "Paper - One-year follow-up"
             type: "paper"
             url: "https://pure.au.dk/ws/portalfiles/portal/216384802/wp21_06.pdf"
+            primary: true
       - title: "Pupil Well-being in Danish Primary and Lower Secondary Schools"
         year: 2020
         venue: "Economics Working Papers 2020-13, Department of Economics and Business Economics, Aarhus University"
