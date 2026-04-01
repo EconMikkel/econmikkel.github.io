@@ -10,14 +10,28 @@ redirect_from:
 ---
 
 <section class="home-hero">
-  <div class="home-hero__content">
-    <h1 class="home-hero__title">{{ site.author.name }}</h1>
-    <p class="home-lead">{{ site.author.bio }}</p>
-    <p class="home-lead">This site brings together my current research, academic writing, and shorter notes on methods, data, and policy questions.</p>
+  <div class="home-hero__left">
+    <div class="home-hero__content">
+      <h1 class="home-hero__title">{{ site.author.name }}</h1>
+      <p class="home-lead">{{ site.author.bio }}</p>
+      <p class="home-lead">This site brings together my current research, academic writing, and shorter notes on methods, data, and policy questions.</p>
 
-    <div class="home-actions">
-      <a class="home-button home-button--primary" href="{{ '/research/' | relative_url }}">View research</a>
-      <a class="home-button home-button--ghost" href="{{ '/notes/' | relative_url }}">Browse notes</a>
+      <div class="home-actions">
+        <a class="home-button home-button--primary" href="{{ '/research/' | relative_url }}">View research</a>
+        <a class="home-button home-button--ghost" href="{{ '/notes/' | relative_url }}">Browse notes</a>
+      </div>
+    </div>
+
+    <div class="home-section home-section--inline">
+      <div class="section-heading">
+        <div>
+          <h2>New news</h2>
+        </div>
+      </div>
+
+      <div class="home-news-list">
+        {% include news-list.html limit=4 %}
+      </div>
     </div>
   </div>
 
@@ -47,18 +61,6 @@ redirect_from:
       </div>
     </div>
   </aside>
-</section>
-
-<section class="home-section">
-  <div class="section-heading">
-    <div>
-      <h2>New news</h2>
-    </div>
-  </div>
-
-  <div class="home-grid home-grid--news">
-    {% include news-list.html limit=4 %}
-  </div>
 </section>
 
 <section class="home-section">

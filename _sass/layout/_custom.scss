@@ -119,6 +119,10 @@ h6,
   padding: 1.2rem 1rem 4rem;
 }
 
+body {
+  padding-top: 0;
+}
+
 .page,
 .archive {
   float: none;
@@ -167,6 +171,21 @@ h6,
   gap: 1.5rem;
   grid-template-columns: minmax(0, 1.8fr) minmax(280px, 1fr);
   margin: 0.5rem 0 0.6rem;
+}
+
+.home-hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.home-section--inline {
+  margin-bottom: 0;
+}
+
+.home-news-list {
+  display: grid;
+  gap: 1rem;
 }
 
 .home-hero__content,
