@@ -56,10 +56,12 @@ h6,
 }
 
 .masthead {
+  animation: none;
   background: linear-gradient(180deg, rgba(255, 250, 247, 0.96), rgba(248, 240, 236, 0.94));
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(201, 42, 42, 0.14);
   box-shadow: 0 12px 30px rgba(33, 37, 41, 0.06);
+  height: auto;
   position: sticky;
   top: 0;
   z-index: 20;
