@@ -9,7 +9,9 @@
     <p class="news-item__date">{{ item.date | date: "%B %-d, %Y" }}</p>
     <h3 class="news-item__title">{{ item.title }}</h3>
     <div class="news-item__body">{{ item.body | markdownify }}</div>
-    {% if item.link %}
+    {% if item.links %}
+      <p>{% for link in item.links %}<a class="note-card__link" href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+    {% elsif item.link %}
       <p><a class="note-card__link" href="{{ item.link.url }}">{{ item.link.label }}</a></p>
     {% endif %}
   </article>
