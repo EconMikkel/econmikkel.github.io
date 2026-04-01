@@ -99,7 +99,8 @@
   border-color: rgba(232, 93, 93, 0.1);
 }
 
-[data-theme="dark"] .research-summary__toggle {
+[data-theme="dark"] .research-summary__toggle,
+[data-theme="dark"] .research-bibtex__toggle {
   background: rgba(232, 93, 93, 0.1);
   border-color: rgba(232, 93, 93, 0.2);
 }
@@ -215,10 +216,17 @@ h6,
 
 .greedy-nav {
   background: transparent;
+  flex: 1;
 }
 
 .greedy-nav a {
   font-size: 0.97rem;
+}
+
+.masthead__menu {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .masthead__menu-item {
@@ -634,18 +642,27 @@ body {
 
 .research-bibtex__toggle {
   align-items: center;
-  background: var(--accent-soft);
-  border: none;
+  background: rgba(255, 245, 245, 0.95);
+  border: 1px solid rgba(201, 42, 42, 0.18);
   border-radius: 999px;
   color: var(--accent-dark);
   cursor: pointer;
   display: inline-flex;
   font-family: "Alegreya Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  gap: 0.5rem;
-  padding: 0.5rem 0.85rem;
-  text-decoration: none;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+}
+
+.research-bibtex__toggle::after {
+  content: "+";
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.research-bibtex__toggle[aria-expanded="true"]::after {
+  content: "\2212";
 }
 
 .research-bibtex__toggle:hover,
@@ -847,7 +864,7 @@ body {
   font-size: 0.95rem;
   height: 2.2rem;
   justify-content: center;
-  margin-left: 0.5rem;
+  flex-shrink: 0;
   transition: background 0.2s ease, color 0.2s ease;
   width: 2.2rem;
 }
