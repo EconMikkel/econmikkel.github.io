@@ -1,8 +1,10 @@
 # Add new items to the top of this list.
 - date: 2026-04-01
   title: "Conference presentations"
-  body: "Foged et al. (2026) has been accepted at two conferences: The Economics of Migration Junior Workshop (May 26-27, Universidad Carlos III de Madrid) and EALE 2026 (August 31 - September 2, University of Barcelona)."
+  body: "Foged et al. (2026) has been accepted at three conferences. Edith Zink presented at the RFBerlin Migration Forum. I will present at The Economics of Migration Junior Workshop (May 26-27, Universidad Carlos III de Madrid) and at EALE 2026 (August 31 - September 2, University of Barcelona)."
   links:
+    - label: "RFBerlin Migration Forum"
+      url: "https://www.rfberlin.com/event/migrationforum2026/"
     - label: "The Economics of Migration Junior Workshop 4th Edition"
       url: "https://economig2026.sciencesconf.org/"
     - label: "EALE 2026"
