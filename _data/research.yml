@@ -17,7 +17,7 @@ sections:
           - name: "Mikkel Stahlschmidt"
           - key: "edith_zink"
         summary: "Private hosting of refugees is a high-cost prosocial behaviour: households share their homes for months. Whether it can scale during displacement crises depends on who steps forward, but population-level evidence is scarce because hosts are rarely identifiable in the full population. Using Denmark's linked address, population and housing registers, we identify about 3,900 households that privately hosted Ukrainian refugees after Russia's 2022 invasion and compare them to all other households. Hosting is highly selective along two margins. Ukrainian-linked households are far more likely to host, and workplace exposure to Ukrainians is associated with hosting. Hosts also come disproportionately from larger households in spacious homes. Selection on socioeconomic resources, including owner-occupation, is concentrated among non-Ukrainian hosts, whereas Ukrainian-linked households host across the income distribution. The findings clarify when private hosting can provide flexible civic reception capacity during displacement shocks."
-        series: "Self-hosted working paper"
+        series: ""
         bibtex: |
           @unpublished{foged2026hostingden,
             title = {Who Opens Their Homes to Refugees? Social ties and capacity during the Ukrainian refugee crisis},
