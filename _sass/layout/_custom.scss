@@ -22,6 +22,10 @@
   --accent: #326891;       /* editorial blue — tweakable (try #121212 or #7a2e2e) */
   --selection: #cfe0ee;
 
+  /* Override inherited theme tokens (theme default bg was purple #5a6ecd) */
+  --global-bg-color: #ffffff;
+  --global-base-color: #121212;
+
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
@@ -30,7 +34,7 @@
 }
 
 /* ----- Base ----------------------------------------------------------- */
-html { font-size: 16px; }
+html { font-size: 16px; background: var(--paper); }
 
 body {
   background: var(--paper);
@@ -121,11 +125,17 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid var(--ink);
 }
 
+/* Nav sticks to the top of the viewport once the nameplate scrolls away */
 .ed-nav {
   display: flex;
   justify-content: center;
   gap: 34px;
-  padding: 14px 0 0;
+  padding: 14px 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--hairline);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 .ed-nav a {
   font-family: var(--sans);
@@ -142,7 +152,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--ink);
   border-bottom-color: var(--accent);
 }
-.ed-nav-hairline { border-bottom: 1px solid var(--hairline); margin-top: 14px; }
 
 /* ----- Shared section header (ruled) ---------------------------------- */
 .section-rule {
@@ -155,9 +164,9 @@ h1, h2, h3, h4, h5, h6 {
 .section-rule h2,
 .section-rule h3 {
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink);
   margin: 0;
@@ -171,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
   font-size: 17px;
   color: var(--muted-3);
-  margin: 14px 0 0;
+  margin: 14px 0 32px;
 }
 
 /* Kicker / eyebrow */
@@ -221,7 +230,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 680px;
 }
 .home-actions { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
-.btn {
+/* .ed-btn (not .btn) to avoid the theme's .btn { color:#fff !important } */
+.ed-btn {
   font-family: var(--sans);
   font-size: 12px;
   font-weight: 600;
@@ -233,10 +243,10 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   transition: background 0.15s ease, color 0.15s ease;
 }
-.btn--solid { color: #fff; background: var(--ink); }
-.btn--solid:hover { background: #000; }
-.btn--ghost { color: var(--ink); background: var(--paper); }
-.btn--ghost:hover { background: var(--ink); color: #fff; }
+.ed-btn--solid { color: #fff; background: var(--ink); }
+.ed-btn--solid:hover { background: #000; color: #fff; }
+.ed-btn--ghost { color: var(--ink); background: var(--paper); }
+.ed-btn--ghost:hover { background: var(--ink); color: #fff; }
 
 .home-grid {
   display: grid;
@@ -302,7 +312,6 @@ h1, h2, h3, h4, h5, h6 {
 .rail__figure img {
   width: 100%;
   display: block;
-  filter: grayscale(100%) contrast(1.02);
 }
 .rail__caption {
   font-family: var(--serif);
@@ -465,8 +474,23 @@ h1, h2, h3, h4, h5, h6 {
   overflow-x: auto;
   white-space: pre;
 }
-.wp__links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin: 15px 0 0; list-style: none; padding: 0; }
+.wp__links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 15px 0 0; list-style: none; padding: 0; }
 .wp__links li { margin: 0; }
+
+/* "Older versions" toggle — smaller, muted text button */
+.wp__btn--mini {
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--muted-3);
+  border-bottom: 1px solid var(--muted-3);
+}
+.wp__btn--mini:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* Older-version links — de-emphasised, indented under the current row */
+.wp__links--older { margin-top: 10px; gap: 10px 20px; }
+.wp__links--older[hidden] { display: none; }
+.wp__links--older .arrow-link { color: var(--muted-3); }
+.wp__links--older .arrow-link:hover { color: var(--ink); }
 
 /* Lighter older / RA-work entry */
 .older {

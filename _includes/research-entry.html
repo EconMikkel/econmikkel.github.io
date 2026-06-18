@@ -37,13 +37,11 @@
     {% endif %}
 
     <div class="wp__actions">
-      <button class="wp__btn" type="button"
-              data-toggle="summary" aria-expanded="false"
-              data-label-closed="Read summary +" data-label-open="Hide summary —">Read summary +</button>
+      <button class="wp__btn" type="button" aria-expanded="false"
+              onclick="var p=this.closest('.wp__content').querySelector('[data-panel=summary]');var h=p.hasAttribute('hidden');if(h){p.removeAttribute('hidden');this.textContent='Hide summary —';}else{p.setAttribute('hidden','');this.textContent='Read summary +';}this.setAttribute('aria-expanded',h);">Read summary +</button>
       {% if entry.bibtex %}
-        <button class="wp__btn" type="button"
-                data-toggle="bibtex" aria-expanded="false"
-                data-label-closed="BibTeX +" data-label-open="Hide BibTeX —">BibTeX +</button>
+        <button class="wp__btn" type="button" aria-expanded="false"
+                onclick="var p=this.closest('.wp__content').querySelector('[data-panel=bibtex]');var h=p.hasAttribute('hidden');if(h){p.removeAttribute('hidden');this.textContent='Hide BibTeX —';}else{p.setAttribute('hidden','');this.textContent='BibTeX +';}this.setAttribute('aria-expanded',h);">BibTeX +</button>
       {% endif %}
     </div>
 
@@ -55,18 +53,32 @@
       <div class="wp__bibtex" data-panel="bibtex" hidden>
         <div class="wp__bibtex-head">
           <span class="wp__bibtex-label">BibTeX</span>
-          <button class="wp__copy" type="button" data-copy data-label="Copy">Copy</button>
+          <button class="wp__copy" type="button"
+                  onclick="var b=this;var t=this.closest('.wp__bibtex').querySelector('pre').textContent.trim();var done=function(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy';},1600);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}">Copy</button>
         </div>
         <pre>{{ entry.bibtex | strip }}</pre>
       </div>
     {% endif %}
 
     {% if entry.links %}
+      {% assign current_links = entry.links | where_exp: "l", "l.older != true" %}
+      {% assign older_links = entry.links | where_exp: "l", "l.older == true" %}
       <ul class="wp__links">
-        {% for link in entry.links %}
+        {% for link in current_links %}
           <li><a class="arrow-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} →</a></li>
         {% endfor %}
+        {% if older_links.size > 0 %}
+          <li><button class="wp__btn wp__btn--mini" type="button" aria-expanded="false"
+                onclick="var p=this.closest('article').querySelector('[data-panel=older]');var h=p.hasAttribute('hidden');if(h){p.removeAttribute('hidden');this.textContent='Hide older versions —';}else{p.setAttribute('hidden','');this.textContent='Older versions +';}this.setAttribute('aria-expanded',h);">Older versions +</button></li>
+        {% endif %}
       </ul>
+      {% if older_links.size > 0 %}
+        <ul class="wp__links wp__links--older" data-panel="older" hidden>
+          {% for link in older_links %}
+            <li><a class="arrow-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} →</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     {% endif %}
   </div>
 </article>
@@ -91,11 +103,24 @@
     </p>
   {% endif %}
   {% if entry.links %}
+    {% assign current_links = entry.links | where_exp: "l", "l.older != true" %}
+    {% assign older_links = entry.links | where_exp: "l", "l.older == true" %}
     <ul class="older__links">
-      {% for link in entry.links %}
+      {% for link in current_links %}
         <li><a class="arrow-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} →</a></li>
       {% endfor %}
+      {% if older_links.size > 0 %}
+        <li><button class="wp__btn wp__btn--mini" type="button" aria-expanded="false"
+              onclick="var p=this.closest('article').querySelector('[data-panel=older]');var h=p.hasAttribute('hidden');if(h){p.removeAttribute('hidden');this.textContent='Hide older versions —';}else{p.setAttribute('hidden','');this.textContent='Older versions +';}this.setAttribute('aria-expanded',h);">Older versions +</button></li>
+      {% endif %}
     </ul>
+    {% if older_links.size > 0 %}
+      <ul class="older__links wp__links--older" data-panel="older" hidden>
+        {% for link in older_links %}
+          <li><a class="arrow-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} →</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   {% endif %}
 </article>
 {% endif %}

@@ -13,8 +13,8 @@ redirect_from:
   <p class="home-standfirst">{{ site.author.bio }}</p>
   <p class="home-lead-2">This site brings together my current research, academic writing, and shorter notes on methods, data, and policy questions.</p>
   <div class="home-actions">
-    <a class="btn btn--solid" href="{{ '/research/' | relative_url }}">View Research</a>
-    <a class="btn btn--ghost" href="{{ '/notes/' | relative_url }}">Browse Notes</a>
+    <a class="ed-btn ed-btn--solid" href="{{ '/research/' | relative_url }}">View Research</a>
+    <a class="ed-btn ed-btn--ghost" href="{{ '/notes/' | relative_url }}">Browse Notes</a>
   </div>
 </section>
 

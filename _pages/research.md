@@ -21,10 +21,6 @@ dek: "Working papers, pre-registered projects, and earlier research-assistance w
       <span class="rule"></span>
     </div>
 
-    {% if section.description %}
-      <p class="research-intro">{{ section.description }}</p>
-    {% endif %}
-
     {% if section.items and section.items.size > 0 %}
       {% for item in section.items %}
         {% assign num = forloop.index | prepend: '0' | slice: -2, 2 %}
