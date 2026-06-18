@@ -21,8 +21,10 @@
   </div>
 
   <div class="scotch"></div>
+</header>
 
-  <nav class="ed-nav">
+<nav class="ed-nav">
+  <div class="ed-nav__inner">
     <a href="{{ '/' | relative_url }}"{% if is_home %} class="is-active"{% endif %}>Home</a>
     {% for link in site.data.navigation.main %}
       {% if link.url contains 'http' %}{% assign href = link.url %}{% else %}{% assign href = link.url | relative_url %}{% endif %}
@@ -31,5 +33,5 @@
       {% if link.url contains "/notes" and is_notes %}{% assign active = true %}{% endif %}
       <a href="{{ href }}"{% if active %} class="is-active"{% endif %}>{{ link.title }}</a>
     {% endfor %}
-  </nav>
-</header>
+  </div>
+</nav>

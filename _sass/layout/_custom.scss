@@ -125,17 +125,21 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid var(--ink);
 }
 
-/* Nav sticks to the top of the viewport once the nameplate scrolls away */
+/* Nav sticks to the top of the viewport once the nameplate scrolls away.
+   It is a direct child of .ed-shell (not the short <header>) so it stays
+   pinned for the whole page rather than scrolling off with the masthead. */
 .ed-nav {
-  display: flex;
-  justify-content: center;
-  gap: 34px;
-  padding: 14px 0;
   background: var(--paper);
   border-bottom: 1px solid var(--hairline);
   position: sticky;
   top: 0;
   z-index: 50;
+}
+.ed-nav__inner {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  padding: 14px 0;
 }
 .ed-nav a {
   font-family: var(--sans);
