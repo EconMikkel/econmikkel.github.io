@@ -1,100 +1,101 @@
 {% assign entry = include.item %}
-<article class="research-entry">
-  <div class="research-entry__header">
-    <div>
-      <h3 class="research-entry__title">{{ entry.title }}</h3>
-      {% if entry.authors %}
-        <p class="research-entry__authors">
-          {% for author in entry.authors %}
-            {% if author.key %}
-              {% assign coauthor = site.data.coauthors[author.key] %}
-            {% else %}
-              {% assign coauthor = nil %}
-            {% endif %}
+{% assign number = include.number %}
 
-            {% if coauthor and coauthor.url %}
-              <a href="{{ coauthor.url }}">{{ coauthor.name }}</a>
-            {% elsif coauthor %}
-              {{ coauthor.name }}
-            {% elsif author.url %}
-              <a href="{{ author.url }}">{{ author.name }}</a>
-            {% else %}
-              {{ author.name }}
-            {% endif %}
-            {% unless forloop.last %}, {% endunless %}
-          {% endfor %}
-        </p>
-      {% endif %}
-      {% if entry.venue %}
-        <p class="research-entry__venue">{{ entry.venue }}{% if entry.series %} · {{ entry.series }}{% endif %}</p>
-      {% endif %}
+{% comment %}
+  Two variants:
+   - "feature" (default, when the entry has a `summary`): index number, metadata
+     line, co-author byline, Read summary / BibTeX toggles, copy, version links.
+   - "light"   (older / RA work, no `summary`): metadata, smaller title, byline, links.
+  Co-author links resolve via _data/coauthors.yml; the site owner's own name
+  (no key / url) stays plain text.
+{% endcomment %}
+
+{% if entry.summary %}
+<article class="wp">
+  <div class="wp__num">{{ number }}</div>
+  <div class="wp__content">
+    <div class="wp__meta">
+      {%- if entry.venue %}{{ entry.venue }}{% endif -%}
+      {%- if entry.series and entry.series != "" %} &nbsp;·&nbsp; {{ entry.series }}{% endif -%}
+      {%- if entry.year %} &nbsp;·&nbsp; {{ entry.year }}{% endif -%}
+      {%- if entry.status %} &nbsp;·&nbsp; <span class="wp__status">{{ entry.status }}</span>{% endif -%}
     </div>
 
-    <div class="research-entry__meta">
-      {% if entry.year %}
-        <span class="research-entry__year">{{ entry.year }}</span>
-      {% endif %}
-      {% if entry.status %}
-        <span class="entry-pill">{{ entry.status }}</span>
-      {% endif %}
-    </div>
-  </div>
+    <h3 class="wp__title">{{ entry.title | strip }}</h3>
 
-  {% if entry.summary %}
-    <details class="research-summary">
-      <summary class="research-summary__toggle">Read summary</summary>
-      <div class="research-summary__body">
-        <p class="research-entry__summary">{{ entry.summary }}</p>
-      </div>
-    </details>
-  {% endif %}
+    {% if entry.authors %}
+      <p class="wp__byline">
+        {%- for author in entry.authors -%}
+          {%- if author.key -%}{% assign coauthor = site.data.coauthors[author.key] %}{%- else -%}{% assign coauthor = nil %}{%- endif -%}
+          {%- if coauthor and coauthor.url -%}<a href="{{ coauthor.url }}" target="_blank" rel="noopener">{{ coauthor.name }}</a>
+          {%- elsif coauthor -%}{{ coauthor.name }}
+          {%- elsif author.url -%}<a href="{{ author.url }}" target="_blank" rel="noopener">{{ author.name }}</a>
+          {%- else -%}{{ author.name }}{%- endif -%}
+          {%- unless forloop.last %}, {% endunless -%}
+        {%- endfor -%}
+      </p>
+    {% endif %}
 
-  {% if entry.links or entry.bibtex %}
-    <div class="research-entry__actions">
-      {% if entry.links %}
-        {% assign has_primary = false %}
-        {% for link in entry.links %}
-          {% if link.primary %}{% assign has_primary = true %}{% endif %}
-        {% endfor %}
-        <ul class="link-chips">
-          {% for link in entry.links %}
-            {% assign link_type = link.type | default: "" | downcase %}
-            {% assign link_label = link.label | default: "" | downcase %}
-            {% assign link_url = link.url | default: "" | downcase %}
-            {% assign icon_class = "fas fa-external-link-alt" %}
-
-            {% if link_type == "paper" or link_label contains "paper" or link_label contains "working paper" or link_label contains "report" %}
-              {% assign icon_class = "fas fa-file-alt" %}
-            {% elsif link_type == "preregistration" or link_type == "pre-registration" or link_label contains "pre-registration" or link_label contains "pre registration" or link_label contains "registry" or link_url contains "osf.io" or link_url contains "socialscienceregistry.org" %}
-              {% assign icon_class = "fas fa-clipboard-list" %}
-            {% elsif link_type == "code" or link_label contains "code" or link_label contains "replication" or link_url contains "github.com" %}
-              {% assign icon_class = "fas fa-code" %}
-            {% endif %}
-
-            {% assign is_secondary = false %}
-            {% if has_primary and link.primary != true %}{% assign is_secondary = true %}{% endif %}
-            <li{% if is_secondary %} class="link-chip--secondary"{% endif %}>
-              <a href="{{ link.url }}">
-                <span>{{ link.label }}</span>
-                <i class="{{ icon_class }}" aria-hidden="true"></i>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-
+    <div class="wp__actions">
+      <button class="wp__btn" type="button"
+              data-toggle="summary" aria-expanded="false"
+              data-label-closed="Read summary +" data-label-open="Hide summary —">Read summary +</button>
       {% if entry.bibtex %}
-        <button class="research-bibtex__toggle" onclick="var body=this.closest('.research-entry').querySelector('.research-bibtex__body');body.hidden=!body.hidden;this.setAttribute('aria-expanded',!body.hidden)" aria-expanded="false">BibTeX</button>
+        <button class="wp__btn" type="button"
+                data-toggle="bibtex" aria-expanded="false"
+                data-label-closed="BibTeX +" data-label-open="Hide BibTeX —">BibTeX +</button>
       {% endif %}
     </div>
-  {% endif %}
 
-  {% if entry.bibtex %}
-    <div class="research-bibtex__body" hidden>
-      <button class="research-bibtex__copy" onclick="var b=this;navigator.clipboard.writeText(this.closest('.research-bibtex__body').querySelector('pre').textContent.trim());b.textContent='Copied!';setTimeout(function(){b.innerHTML='<i class=\'fas fa-copy\' aria-hidden=\'true\'></i> Copy'},1500)" aria-label="Copy BibTeX">
-        <i class="fas fa-copy" aria-hidden="true"></i> Copy
-      </button>
-      <pre class="research-bibtex__code">{{ entry.bibtex | strip }}</pre>
+    <div class="wp__summary" data-panel="summary" hidden>
+      <p>{{ entry.summary }}</p>
     </div>
+
+    {% if entry.bibtex %}
+      <div class="wp__bibtex" data-panel="bibtex" hidden>
+        <div class="wp__bibtex-head">
+          <span class="wp__bibtex-label">BibTeX</span>
+          <button class="wp__copy" type="button" data-copy data-label="Copy">Copy</button>
+        </div>
+        <pre>{{ entry.bibtex | strip }}</pre>
+      </div>
+    {% endif %}
+
+    {% if entry.links %}
+      <ul class="wp__links">
+        {% for link in entry.links %}
+          <li><a class="arrow-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} →</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</article>
+
+{% else %}
+<article class="older">
+  <div class="older__meta">
+    {%- if entry.venue %}{{ entry.venue }}{% endif -%}
+    {%- if entry.year %} &nbsp;·&nbsp; {{ entry.year }}{% endif -%}
+  </div>
+  <h3 class="older__title">{{ entry.title | strip }}</h3>
+  {% if entry.authors %}
+    <p class="older__byline">
+      {%- for author in entry.authors -%}
+        {%- if author.key -%}{% assign coauthor = site.data.coauthors[author.key] %}{%- else -%}{% assign coauthor = nil %}{%- endif -%}
+        {%- if coauthor and coauthor.url -%}<a href="{{ coauthor.url }}" target="_blank" rel="noopener">{{ coauthor.name }}</a>
+        {%- elsif coauthor -%}{{ coauthor.name }}
+        {%- elsif author.url -%}<a href="{{ author.url }}" target="_blank" rel="noopener">{{ author.name }}</a>
+        {%- else -%}{{ author.name }}{%- endif -%}
+        {%- unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}
+    </p>
+  {% endif %}
+  {% if entry.links %}
+    <ul class="older__links">
+      {% for link in entry.links %}
+        <li><a class="arrow-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} →</a></li>
+      {% endfor %}
+    </ul>
   {% endif %}
 </article>
+{% endif %}

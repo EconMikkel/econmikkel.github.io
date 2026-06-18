@@ -5,16 +5,24 @@
 {% endif %}
 
 {% if notes_posts.size > 0 %}
-  {% for post in notes_posts %}
-    <article class="note-card">
-      <p class="note-card__date">{{ post.date | date: "%B %-d, %Y" }}</p>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      {% if post.excerpt %}
-        <p>{{ post.excerpt | strip_html | strip_newlines }}</p>
-      {% endif %}
-      <a class="note-card__link" href="{{ post.url | relative_url }}">Read note</a>
-    </article>
-  {% endfor %}
+  <div class="notes-list">
+    {% for post in notes_posts %}
+      <article class="news-item">
+        <div class="news-item__kicker">{% if post.kicker %}{{ post.kicker }}{% else %}Note{% endif %}</div>
+        <h3 class="news-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <div class="news-item__date">{{ post.date | date: "%B %-d, %Y" }}</div>
+        {% if post.excerpt %}
+          <div class="news-item__dek"><p>{{ post.excerpt | strip_html | strip_newlines }}</p></div>
+        {% endif %}
+        <div class="news-item__links">
+          <a class="arrow-link" href="{{ post.url | relative_url }}">Read note &nbsp;→</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
 {% else %}
-  <p class="empty-state">No notes published yet. Add your first post in <code>_posts/</code> when you are ready.</p>
+  <div class="notes-empty">
+    <p class="notes-empty__lead">No notes published yet.</p>
+    <p class="notes-empty__sub">New essays and short analyses will appear here</p>
+  </div>
 {% endif %}

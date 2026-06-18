@@ -6,13 +6,24 @@
 
 {% for item in news_items %}
   <article class="news-item">
-    <p class="news-item__date">{{ item.date | date: "%B %-d, %Y" }}</p>
+    {% if item.kicker %}
+      <div class="news-item__kicker">{{ item.kicker }}</div>
+    {% endif %}
     <h3 class="news-item__title">{{ item.title }}</h3>
-    <div class="news-item__body">{{ item.body | markdownify }}</div>
-    {% if item.links %}
-      <p>{% for link in item.links %}<a class="note-card__link" href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
-    {% elsif item.link %}
-      <p><a class="note-card__link" href="{{ item.link.url }}">{{ item.link.label }}</a></p>
+    <div class="news-item__date">{{ item.date | date: "%B %-d, %Y" }}</div>
+    {% if item.body %}
+      <div class="news-item__dek">{{ item.body | markdownify }}</div>
+    {% endif %}
+    {% if item.links or item.link %}
+      <div class="news-item__links">
+        {% if item.links %}
+          {% for link in item.links %}
+            <a class="arrow-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} &nbsp;→</a>
+          {% endfor %}
+        {% elsif item.link %}
+          <a class="arrow-link" href="{{ item.link.url }}" target="_blank" rel="noopener">{{ item.link.label }} &nbsp;→</a>
+        {% endif %}
+      </div>
     {% endif %}
   </article>
 {% endfor %}

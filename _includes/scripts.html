@@ -1,1 +1,51 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
+
+<!-- Editorial interactions: Read summary / BibTeX toggles + copy-to-clipboard -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    // Toggle a panel ([data-panel]) within the same .wp__content
+    var toggle = e.target.closest('[data-toggle]');
+    if (toggle) {
+      var content = toggle.closest('.wp__content');
+      if (!content) return;
+      var name = toggle.getAttribute('data-toggle');
+      var panel = content.querySelector('[data-panel="' + name + '"]');
+      if (!panel) return;
+      var nowHidden = !panel.hasAttribute('hidden') ? true : false;
+      if (panel.hasAttribute('hidden')) { panel.removeAttribute('hidden'); }
+      else { panel.setAttribute('hidden', ''); }
+      var open = !panel.hasAttribute('hidden');
+      toggle.setAttribute('aria-expanded', open);
+      var openLabel = toggle.getAttribute('data-label-open');
+      var closedLabel = toggle.getAttribute('data-label-closed');
+      if (openLabel && closedLabel) {
+        toggle.textContent = open ? openLabel : closedLabel;
+      }
+      return;
+    }
+
+    // Copy BibTeX to clipboard
+    var copy = e.target.closest('[data-copy]');
+    if (copy) {
+      var box = copy.closest('.wp__bibtex');
+      var pre = box ? box.querySelector('pre') : null;
+      if (!pre) return;
+      var text = pre.textContent.trim();
+      var done = function () {
+        var original = copy.getAttribute('data-label') || 'Copy';
+        copy.textContent = 'Copied ✓';
+        setTimeout(function () { copy.textContent = original; }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (err) {}
+        document.body.removeChild(ta); done();
+      }
+    }
+  });
+})();
+</script>

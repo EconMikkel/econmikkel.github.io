@@ -1,3 +1,14 @@
-<div class="page__footer-copyright footer-shell">
-  <p class="footer__meta"> Last updated {{ "now" | date: "%Y-%m-%d" }}.</p>
-</div>
+<footer class="ed-footer">
+  <div class="ed-footer__rule"></div>
+  <div class="ed-footer__row">
+    <span>&copy; {{ site.time | date: "%Y" }} {{ site.author.name | default: site.title }}</span>
+    <div class="ed-footer__nav">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      {% for link in site.data.navigation.main %}
+        {% if link.url contains 'http' %}{% assign href = link.url %}{% else %}{% assign href = link.url | relative_url %}{% endif %}
+        <a href="{{ href }}">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+    <span>Last updated {{ site.time | date: "%B %-d, %Y" }}</span>
+  </div>
+</footer>

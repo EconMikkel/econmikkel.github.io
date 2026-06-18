@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: editorial
 permalink: /
 title: ""
 excerpt: "Research, working papers, and short notes."
@@ -9,70 +9,55 @@ redirect_from:
   - /about.html
 ---
 
-<section class="home-hero">
-  <div class="home-hero__left">
-    <div class="home-hero__content">
-      <h1 class="home-hero__title">{{ site.author.name }}</h1>
-      <p class="home-lead">{{ site.author.bio }}</p>
-      <p class="home-lead">This site brings together my current research, academic writing, and shorter notes on methods, data, and policy questions.</p>
+<section class="home-lead-block">
+  <p class="home-standfirst">{{ site.author.bio }}</p>
+  <p class="home-lead-2">This site brings together my current research, academic writing, and shorter notes on methods, data, and policy questions.</p>
+  <div class="home-actions">
+    <a class="btn btn--solid" href="{{ '/research/' | relative_url }}">View Research</a>
+    <a class="btn btn--ghost" href="{{ '/notes/' | relative_url }}">Browse Notes</a>
+  </div>
+</section>
 
-      <div class="home-actions">
-        <a class="home-button home-button--primary" href="{{ '/research/' | relative_url }}">View research</a>
-        <a class="home-button home-button--ghost" href="{{ '/notes/' | relative_url }}">Browse notes</a>
-      </div>
+<div class="home-grid">
+  <!-- Main: The Latest -->
+  <div class="home-main">
+    <div class="section-rule">
+      <h2>The Latest</h2>
+      <span class="rule"></span>
     </div>
-
-    <div class="home-section home-section--inline">
-      <div class="section-heading">
-        <div>
-          <h2>New news</h2>
-        </div>
-      </div>
-
-      <div class="home-news-list">
-        {% include news-list.html limit=4 %}
-      </div>
-    </div>
+    {% include news-list.html limit=4 %}
   </div>
 
-  <aside class="home-hero__profile">
-    <img src="{{ '/images/profile.jpg' | relative_url }}" alt="{{ site.author.name }}">
+  <!-- Rail -->
+  <aside class="rail">
+    <figure class="rail__figure">
+      <img src="{{ '/images/profile.jpg' | relative_url }}" alt="{{ site.author.name }}">
+      <figcaption class="rail__caption">{{ site.author.name }}, {{ site.author.location }}.</figcaption>
+    </figure>
 
-    <div class="home-profile__list">
-      <div class="home-profile__row">
-        <span class="home-profile__label">Affiliations</span>
-        <span class="home-profile__value">
-          {% for emp in site.author.employer %}
-            {{ emp }}{% unless forloop.last %}<br>{% endunless %}
-          {% endfor %}
-        </span>
+    <div class="rail__block rail__block--first">
+      <div class="rail__label">Affiliations</div>
+      <div class="rail__value">
+        {% for emp in site.author.employer %}{{ emp }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}
       </div>
-      <div class="home-profile__row">
-        <span class="home-profile__label">Location</span>
-        <span class="home-profile__value">{{ site.author.location }}</span>
-      </div>
-      <div class="home-profile__row">
-        <span class="home-profile__label">Email</span>
-        <span class="home-profile__value"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
-      </div>
-      <div class="home-profile__row">
-        <span class="home-profile__label">Profiles</span>
-        <span class="home-profile__value"><a href="{{ site.author.googlescholar }}">Google Scholar</a> | <a href="{{ site.author.orcid }}">ORCID</a></span>
+    </div>
+
+    <div class="rail__block">
+      <div class="rail__label">Location</div>
+      <div class="rail__value">{{ site.author.location }}</div>
+    </div>
+
+    <div class="rail__block">
+      <div class="rail__label">Email</div>
+      <div class="rail__value"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></div>
+    </div>
+
+    <div class="rail__block">
+      <div class="rail__label">Profiles</div>
+      <div class="rail__profiles">
+        {% if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar →</a>{% endif %}
+        {% if site.author.orcid %}<a href="{{ site.author.orcid }}" target="_blank" rel="noopener">ORCID →</a>{% endif %}
       </div>
     </div>
   </aside>
-</section>
-
-<section class="home-section">
-  <div class="section-heading">
-    <div>
-      <h2>Recent notes</h2>
-      <p>Smaller analyses, open questions, and blog-style writing.</p>
-    </div>
-    <a href="{{ '/notes/' | relative_url }}">See all notes</a>
-  </div>
-
-  <div class="home-grid home-grid--notes">
-    {% include notes-list.html limit=3 %}
-  </div>
-</section>
+</div>

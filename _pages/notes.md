@@ -1,15 +1,17 @@
 ---
-layout: archive
+layout: editorial
 title: "Notes"
 permalink: /notes/
 excerpt: "Short essays, smaller analyses, and research questions."
 author_profile: false
+heading: "Notes"
+dek: "Blog-style posts: smaller analyses, open questions, and musings on methods and data. Not peer-reviewed and by no means formal research."
 ---
 
-<div class="page-intro">
-  <p>This section is for blog-style posts: smaller analysis projects, musings, or similar. This is not peer-reviewed and by no means "formal" research.</p>
-</div>
+<header class="page-head">
+  <div class="kicker">Notes</div>
+  <h1 class="page-head__title">{{ page.heading | default: page.title }}</h1>
+  {% if page.dek %}<p class="page-head__dek">{{ page.dek }}</p>{% endif %}
+</header>
 
-<div class="home-grid home-grid--notes">
-  {% include notes-list.html %}
-</div>
+{% include notes-list.html %}
