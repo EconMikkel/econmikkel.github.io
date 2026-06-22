@@ -1,5 +1,5 @@
 /* ==========================================================================
-   NYT-style editorial redesign — Mikkel Stahlschmidt
+   NYT-style editorial redesign — Mikkel Hahn Stahlschmidt
    All custom styling lives here (imported last in main.scss).
    Design tokens, typography, and layouts per the design handoff.
    ========================================================================== */
@@ -345,6 +345,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #222;
 }
 .rail__value a { color: var(--accent); border-bottom: 1px solid var(--underline); }
+
+/* Preferred-citation callout */
+.rail__cite-value {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.cite-note {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin: 16px 0 0;
+}
+.cite-note span { color: var(--accent); }
 .rail__profiles { display: flex; flex-direction: column; gap: 8px; }
 .rail__profiles a {
   font-family: var(--sans);

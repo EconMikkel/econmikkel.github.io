@@ -35,7 +35,14 @@ redirect_from:
       <figcaption class="rail__caption">{{ site.author.name }}, {{ site.author.location }}.</figcaption>
     </figure>
 
-    <div class="rail__block rail__block--first">
+    {% if site.author.citation_name %}
+    <div class="rail__block rail__block--first rail__cite">
+      <div class="rail__label">Cite as</div>
+      <div class="rail__cite-value">{{ site.author.citation_name }}</div>
+    </div>
+    {% endif %}
+
+    <div class="rail__block">
       <div class="rail__label">Affiliations</div>
       <div class="rail__value">
         {% for emp in site.author.employer %}{{ emp }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}

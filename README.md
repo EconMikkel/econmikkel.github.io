@@ -58,7 +58,7 @@ The file is a list of `sections`; add items under the relevant section's
   series: "Working Paper No. 1"    # optional; appended after venue with " · "
   authors:
     - key: "mette_foged"           # lookup from _data/coauthors.yml
-    - name: "Mikkel Stahlschmidt"  # inline name (no lookup) — your own name stays plain
+    - name: "Mikkel Hahn Stahlschmidt"  # inline name (no lookup) — your own name stays plain
   summary: "Abstract text. HTML like <i>italics</i> is allowed."
   bibtex: |
     @unpublished{key2026,
@@ -127,6 +127,22 @@ Write the post here.
 
 When `_posts/` is empty the Notes page shows an empty-state block; once posts
 exist they render as an editorial article list automatically.
+
+### Your name and preferred citation
+
+Your display name and the "Cite as" callout come from `_config.yml`:
+
+```yml
+title: "Mikkel Hahn Stahlschmidt"        # masthead nameplate + browser title
+author:
+  name: "Mikkel Hahn Stahlschmidt"       # bylines, footer, photo caption
+  citation_name: "Stahlschmidt, M. H."   # shown in the Home rail "Cite as" block
+                                          # and as "Preferred citation" on Research
+```
+
+Change these in one place and they update everywhere. The BibTeX panels are
+separate — edit the `author = {…}` line in each entry's `bibtex:` if you want a
+copied citation to read a particular way.
 
 ## Tweaking the design
 

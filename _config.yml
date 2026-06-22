@@ -1,15 +1,16 @@
 locale: "en-US"
 site_theme: "default"
-title: "Mikkel Stahlschmidt"
-name: &name "Mikkel Stahlschmidt"
-description: &description "Research, working papers, and notes by Mikkel Stahlschmidt."
+title: "Mikkel Hahn Stahlschmidt"
+name: &name "Mikkel Hahn Stahlschmidt"
+description: &description "Research, working papers, and notes by Mikkel Hahn Stahlschmidt."
 url: "https://econmikkel.github.io"
 baseurl: ""
 repository: "econmikkel/econmikkel.github.io"
 
 author:
   avatar: "profile.jpg"
-  name: "Mikkel Stahlschmidt"
+  name: "Mikkel Hahn Stahlschmidt"
+  citation_name: "Stahlschmidt, M. H."
   bio: "PhD student in economics with a focus on applied microeconometrics. My research uses causal inference methods to study refugee integration, public policy, and survey methodology."
   employer:
     - "University of Copenhagen, Department of Economics"
@@ -39,7 +40,7 @@ facebook:
 og_image:
 social:
   type: "Person"
-  name: "Mikkel Stahlschmidt"
+  name: "Mikkel Hahn Stahlschmidt"
   links:
     - "https://scholar.google.com/citations?user=VfLh5XEAAAAJ"
     - "https://orcid.org/0009-0007-2392-6470"
