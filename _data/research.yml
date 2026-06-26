@@ -7,6 +7,29 @@ sections:
   - title: "Working papers and projects"
     description: "Current papers, ongoing research, and major projects."
     items:
+      - title: "Attrition Bias in AI-Administered Interviews"
+        year: 2026
+        status: "In press"
+        venue: "OSF Preprints (SocArXiv)"
+        authors:
+          - name: "Mikkel H. Stahlschmidt"
+          - key: "tobias_gardhus"
+          - key: "hjalmar_carlsen"
+        summary: "Who finishes an AI-administered interview, and how does that group differ from who finishes a standard survey? We report a pre-registered four-arm randomized experiment (N = 1,591) assigning Danish online-panel adults to a standardized survey, a standardized chat, an adaptive AI chat, and an extended adaptive AI chat, all covering same substantive content. Completion falls monotonically from 91.8% to 66.7% across arms. The chat interface drives most of the gap (a 14.6 percentage-point drop), limited adaptive probing adds almost nothing (2.3 percentage-point), and extended probing leads to exhaustion and attrition (8.2 percentage-point). Dropout is socially selective: in the most demanding arm, respondents aged 18 to 34 are more likely to complete than those aged 56 and older, and completers are more educated and more likely to use a computer rather than a smartphone. AI-interview samples are therefore younger, more educated, and more desktop-oriented, with direct consequences for inference of results."
+        series: ""
+        bibtex: |
+          @unpublished{stahlschmidt2026attrition,
+            title = {Attrition Bias in AI-Administered Interviews},
+            author = {Stahlschmidt, Mikkel H. and Gaardhus, Tobias Priesholm and Carlsen, Hjalmar Bang},
+            note = {Working Paper},
+            year = {2026},
+            month = june,
+          }
+        links:
+          - label: "Working paper"
+            type: "paper"
+            url: "osf.io/preprints/socarxiv/eczs9_v1"
+            primary: true
       - title: "Who Opens Their Homes to Refugees? Social ties and capacity during the Ukrainian refugee crisis"
         year: 2026
         status: "In press"
@@ -14,7 +37,7 @@ sections:
         authors:
           - key: "mette_foged"
           - key: "jens_hainmueller"
-          - name: "Mikkel Hahn Stahlschmidt"
+          - name: "Mikkel H. Stahlschmidt"
           - key: "edith_zink"
         summary: "Private hosting of refugees is a high-cost prosocial behaviour: households share their homes for months. Whether it can scale during displacement crises depends on who steps forward, but population-level evidence is scarce because hosts are rarely identifiable in the full population. Using Denmark's linked address, population and housing registers, we identify about 3,900 households that privately hosted Ukrainian refugees after Russia's 2022 invasion and compare them to all other households. Hosting is highly selective along two margins. Ukrainian-linked households are far more likely to host, and workplace exposure to Ukrainians is associated with hosting. Hosts also come disproportionately from larger households in spacious homes. Selection on socioeconomic resources, including owner-occupation, is concentrated among non-Ukrainian hosts, whereas Ukrainian-linked households host across the income distribution. The findings clarify when private hosting can provide flexible civic reception capacity during displacement shocks."
         series: ""

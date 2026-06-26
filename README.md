@@ -21,6 +21,25 @@ bundle exec jekyll serve --livereload
 Then open <http://localhost:4000>. Edits to data files and posts reload
 automatically; after editing `_sass/` or `_includes/`, hard-refresh the browser.
 
+## Easiest way: the Content Manager
+
+Instead of editing YAML by hand, open **`content-manager.html`** (double-click it;
+it lives in the repo root and is excluded from the published site). It's a small
+graphical tool for adding news and research entries.
+
+1. Click **Connect _data folder** and pick the `_data` folder (or the repo root).
+2. Choose the **News** or **Research** tab and fill in the form. A live YAML
+   preview shows exactly what will be written.
+3. Click **Add to file** — the entry is inserted into `news.yml` / `research.yml`
+   (newest first), keeping everything else in the file intact.
+4. Rebuild / refresh the site to see it. Because the repo is in git, you can
+   always undo a change.
+
+Direct saving works in **Chrome or Edge**. In other browsers the tool switches to
+copy-paste mode: click **Copy snippet** and paste it into the file at the spot it
+tells you. The manual schema below still applies if you'd rather edit the files
+directly.
+
 ## Where to edit
 
 ### Homepage news (`_data/news.yml`)

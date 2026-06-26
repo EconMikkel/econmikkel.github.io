@@ -50,6 +50,7 @@ include:
   - _pages
   - files
 exclude:
+  - content-manager.html
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
