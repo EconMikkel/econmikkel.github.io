@@ -28,7 +28,7 @@ sections:
         links:
           - label: "Working paper"
             type: "paper"
-            url: "{https://osf.io/preprints/socarxiv/eczs9_v1}"
+            url: "https://osf.io/preprints/socarxiv/eczs9_v1"
             primary: true
       - title: "Who Opens Their Homes to Refugees? Social ties and capacity during the Ukrainian refugee crisis"
         year: 2026
