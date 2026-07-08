@@ -45,7 +45,7 @@ redirect_from:
     <div class="rail__block">
       <div class="rail__label">Affiliations</div>
       <div class="rail__value">
-        {% for emp in site.author.employer %}{{ emp }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}
+        {% for emp in site.author.employer %}{% if emp.url %}<a href="{{ emp.url }}" target="_blank" rel="noopener">{{ emp.name }}</a>{% else %}{{ emp.name | default: emp }}{% endif %}{% unless forloop.last %}<br>{% endunless %}{% endfor %}
       </div>
     </div>
 
