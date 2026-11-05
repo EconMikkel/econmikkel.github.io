@@ -2,7 +2,7 @@
 layout: editorial
 permalink: /
 title: ""
-excerpt: "Research, working papers, and short notes."
+excerpt: "Research, working papers, and presentations."
 author_profile: false
 redirect_from:
   - /about/
@@ -11,10 +11,10 @@ redirect_from:
 
 <section class="home-lead-block">
   <p class="home-standfirst">{{ site.author.bio }}</p>
-  <p class="home-lead-2">This site brings together my current research, academic writing, and shorter notes on methods, data, and policy questions.</p>
+  <p class="home-lead-2">This site brings together my current research, academic writing, and presentations.</p>
   <div class="home-actions">
     <a class="ed-btn ed-btn--solid" href="{{ '/research/' | relative_url }}">View Research</a>
-    <a class="ed-btn ed-btn--ghost" href="{{ '/notes/' | relative_url }}">Browse Notes</a>
+    <a class="ed-btn ed-btn--ghost" href="{{ '/presentations/' | relative_url }}">Presentations</a>
   </div>
 </section>
 

@@ -1,0 +1,26 @@
+# Presentations, talks, and workshops.
+# Listed newest first on /presentations/, grouped by year.
+#
+# Fields:
+#   year:    (required) used for grouping
+#   place:   where it was given, e.g. "SODAS" or "ROCKWOOL Foundation"
+#   context: the occasion, e.g. "AI Workshop", "Data Discussion", "Conference X"
+#   title:   title of the presentation
+#   date:    (optional) free text, e.g. "March" or "12 March"
+#   url:     (optional) link to slides/recording — makes the title clickable
+#
+# Example:
+#   - year: 2026
+#     date: "March"
+#     place: "SODAS"
+#     context: "AI Workshop"
+#     title: "Attrition Bias in AI-Administered Interviews"
+#     url: "https://example.com/slides.pdf"
+
+presentations:
+  - year: 2026
+    date: "6 November"
+    place: "SODAS at University of Copenhagen"
+    context: "Data Discussion"
+    title: "What Do We Gain (and Lose) from Responsive Survey Questions?"
+    url: "https://sodas.ku.dk/events/2026/sodas-data-discussion-iii-fall-2026/"

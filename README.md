@@ -2,14 +2,14 @@
 
 A static Jekyll site styled as a New York Times–style editorial layout
 (Newsreader + Libre Franklin, black-on-white, hairline/scotch rules). It has
-three pages — **Home** (`/`), **Research** (`/research/`), **Notes** (`/notes/`) —
+three pages — **Home** (`/`), **Research** (`/research/`), **Presentations** (`/presentations/`) —
 and three editing workflows:
 
 1. Update homepage news in `_data/news.yml`
 2. Update publications and projects in `_data/research.yml`
-3. Publish blog-style notes by adding Markdown files to `_posts/`
+3. Update talks and presentations in `_data/presentations.yml`
 
-You never edit HTML/CSS to add content — just the data files and posts below.
+You never edit HTML/CSS to add content — just the data files below.
 
 ## Preview locally
 
@@ -131,21 +131,21 @@ mette_foged:
 
 For one-off collaborators, use an inline `name` (with an optional `url`).
 
-### Notes and blog posts (`_posts/`)
+### Presentations (`_data/presentations.yml`)
 
-Create a file named `YYYY-MM-DD-title.md`:
+Add one entry per talk; they are grouped by year (newest first) in a compact list:
 
-```md
----
-title: "A short note title"
-excerpt: "One-sentence summary shown in the notes list."
----
-
-Write the post here.
+```yml
+presentations:
+  - year: 2026
+    date: "March"                 # optional
+    place: "SODAS"
+    context: "AI Workshop"
+    title: "Attrition Bias in AI-Administered Interviews"
+    url: "https://example.com/slides.pdf"   # optional; makes the title a link
 ```
 
-When `_posts/` is empty the Notes page shows an empty-state block; once posts
-exist they render as an editorial article list automatically.
+With no entries the page shows a short "No presentations added yet." note.
 
 ### Your name and preferred citation
 
@@ -171,7 +171,7 @@ copied citation to read a particular way.
 - **Section headings, type, spacing, hairlines:** all live in
   `_sass/layout/_custom.scss` as CSS custom properties and component classes.
 - **Masthead / nav / footer:** `_includes/masthead.html` and
-  `_includes/footer.html`. The nav (`HOME · RESEARCH · NOTES`) sticks to the top
+  `_includes/footer.html`. The nav (`HOME · RESEARCH · PRESENTATIONS`) sticks to the top
   when you scroll; the active page is detected from the URL.
 - The expand/collapse and copy-to-clipboard behaviour is a few lines of inline
   vanilla JS in `_includes/research-entry.html` — no framework or build step.
