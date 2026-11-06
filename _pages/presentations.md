@@ -26,13 +26,14 @@ dek: "Talks, workshops, and seminar presentations."
   <ul class="talks">
   {%- for talk in group.items %}
     <li class="talk">
-      <div class="talk__title">
-        {%- if talk.url -%}<a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>{%- else -%}{{ talk.title }}{%- endif -%}
-      </div>
-      <div class="talk__meta">
-        {%- if talk.place %}<span class="talk__place">{{ talk.place }}</span>{% endif -%}
-        {%- if talk.context %}{% if talk.place %} &nbsp;·&nbsp; {% endif %}{{ talk.context }}{% endif -%}
-        {%- if talk.date %} &nbsp;·&nbsp; {{ talk.date }}{% endif -%}
+      <div class="talk__date">{{ talk.date }}</div>
+      <div class="talk__body">
+        <div class="talk__place">
+          {%- if talk.url -%}<a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.place }}</a>{%- else -%}{{ talk.place }}{%- endif -%}
+        </div>
+        {%- if talk.context %}
+        <div class="talk__context">{{ talk.context }}</div>
+        {%- endif %}
       </div>
     </li>
   {%- endfor %}

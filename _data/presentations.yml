@@ -5,9 +5,9 @@
 #   year:    (required) used for grouping
 #   place:   where it was given, e.g. "SODAS" or "ROCKWOOL Foundation"
 #   context: the occasion, e.g. "AI Workshop", "Data Discussion", "Conference X"
-#   title:   title of the presentation
+#   title:   title of the presentation (kept for reference, not shown on the page)
 #   date:    (optional) free text, e.g. "March" or "12 March"
-#   url:     (optional) link to slides/recording — makes the title clickable
+#   url:     (optional) link to the event/slides — makes the place clickable
 #
 # Example:
 #   - year: 2026
