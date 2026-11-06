@@ -16,29 +16,29 @@ dek: "Talks, workshops, and seminar presentations."
 
 {% assign talks = site.data.presentations.presentations %}
 {% if talks and talks.size > 0 %}
-  {% assign years = talks | group_by: "year" | sort: "name" | reverse %}
-  {% for group in years %}
-    <section class="talks-section">
-      <div class="section-rule">
-        <h2>{{ group.name }}</h2>
-        <span class="rule"></span>
+{% assign years = talks | group_by: "year" | sort: "name" | reverse %}
+{% for group in years %}
+<section class="talks-section">
+  <div class="section-rule">
+    <h2>{{ group.name }}</h2>
+    <span class="rule"></span>
+  </div>
+  <ul class="talks">
+  {%- for talk in group.items %}
+    <li class="talk">
+      <div class="talk__title">
+        {%- if talk.url -%}<a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>{%- else -%}{{ talk.title }}{%- endif -%}
       </div>
-      <ul class="talks">
-        {% for talk in group.items %}
-          <li class="talk">
-            <div class="talk__title">
-              {%- if talk.url -%}<a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>{%- else -%}{{ talk.title }}{%- endif -%}
-            </div>
-            <div class="talk__meta">
-              {%- if talk.place %}<span class="talk__place">{{ talk.place }}</span>{% endif -%}
-              {%- if talk.context %}{% if talk.place %} &nbsp;·&nbsp; {% endif %}{{ talk.context }}{% endif -%}
-              {%- if talk.date %} &nbsp;·&nbsp; {{ talk.date }}{% endif -%}
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-  {% endfor %}
+      <div class="talk__meta">
+        {%- if talk.place %}<span class="talk__place">{{ talk.place }}</span>{% endif -%}
+        {%- if talk.context %}{% if talk.place %} &nbsp;·&nbsp; {% endif %}{{ talk.context }}{% endif -%}
+        {%- if talk.date %} &nbsp;·&nbsp; {{ talk.date }}{% endif -%}
+      </div>
+    </li>
+  {%- endfor %}
+  </ul>
+</section>
+{% endfor %}
 {% else %}
-  <p class="empty-note">No presentations added yet.</p>
+<p class="empty-note">No presentations added yet.</p>
 {% endif %}
