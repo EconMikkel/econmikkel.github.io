@@ -7,7 +7,6 @@
 #   context: the occasion, e.g. "AI Workshop", "Data Discussion", "Conference X"
 #   title:   title of the presentation (kept for reference, not shown on the page)
 #   date:    (optional) free text, e.g. "March" or "12 March"
-#   url:     (optional) link to the event/slides — makes the place clickable
 #
 # Example:
 #   - year: 2026
@@ -15,7 +14,6 @@
 #     place: "SODAS"
 #     context: "AI Workshop"
 #     title: "Attrition Bias in AI-Administered Interviews"
-#     url: "https://example.com/slides.pdf"
 
 presentations:
   - year: 2026
@@ -23,7 +21,6 @@ presentations:
     place: "SODAS at University of Copenhagen"
     context: "Data Discussion"
     title: "What Do We Gain (and Lose) from Responsive Survey Questions?"
-    url: "https://sodas.ku.dk/events/2026/sodas-data-discussion-iii-fall-2026/"
 
   - year: 2026
     date: "3 September"

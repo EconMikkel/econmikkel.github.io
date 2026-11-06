@@ -28,9 +28,7 @@ dek: "Talks, workshops, and seminar presentations."
     <li class="talk">
       <div class="talk__date">{{ talk.date }}</div>
       <div class="talk__body">
-        <div class="talk__place">
-          {%- if talk.url -%}<a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.place }}</a>{%- else -%}{{ talk.place }}{%- endif -%}
-        </div>
+        <div class="talk__place">{{ talk.place }}</div>
         {%- if talk.context %}
         <div class="talk__context">{{ talk.context }}</div>
         {%- endif %}
